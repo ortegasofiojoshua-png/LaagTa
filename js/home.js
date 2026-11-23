@@ -2,21 +2,10 @@ const destinations = [
     {
         name: "Dahilayan Adventure Park",
         description: "An adventure destination known for outdoor activities and exciting attractions.",
-        image: "images/destinations/dahilayan-adventure-park/1.jpg",
+        image: "images/destinations/dahilayan-adventure-park/entrance.jpg",
         link: "destinations/dahilayan-adventure-park.html"
     },
-    {
-        name: "Dahilayan Forest Park",
-        description: "A nature destination surrounded by trees and cool mountain surroundings.",
-        image: "images/destinations/dahilayan-forest-park/1.jpg",
-        link: "destinations/dahilayan-forest-park.html"
-    },
-    {
-        name: "Dahilayan Alpine Village and Kawa Hot Bath",
-        description: "A mountain destination featuring alpine-inspired attractions and a relaxing kawa bath experience.",
-        image: "images/destinations/dahilayan-alpine-village/1.jpg",
-        link: "destinations/dahilayan-alpine-village.html"
-    },
+    
     {
         name: "KampoJuan Eco-Adventure Farm",
         description: "An eco-adventure destination offering outdoor experiences and nature activities.",
@@ -29,12 +18,7 @@ const destinations = [
         image: "images/destinations/del-monte/1.jpg",
         link: "destinations/del-monte-pineapple-plantation.html"
     },
-    {
-        name: "Sumalsag Cave and View Decks",
-        description: "A natural attraction featuring a cave and scenic viewing areas.",
-        image: "images/destinations/sumalsag-cave/1.jpg",
-        link: "destinations/sumalsag-cave.html"
-    },
+    
     {
         name: "General Douglas MacArthur Landmark",
         description: "A historical landmark commemorating General Douglas MacArthur.",
@@ -46,12 +30,6 @@ const destinations = [
         description: "A historical memorial honoring heroes and remembering the past.",
         image: "images/destinations/mangima-heroes-shrine/1.jpg",
         link: "destinations/mangima-heroes-shrine.html"
-    },
-    {
-        name: "Manolo Fortich Municipal Museum",
-        description: "A museum where visitors can learn about the history and heritage of Manolo Fortich.",
-        image: "images/destinations/municipal-museum/1.jpg",
-        link: "destinations/municipal-museum.html"
     }
 ];
 

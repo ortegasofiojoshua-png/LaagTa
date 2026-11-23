@@ -8,14 +8,16 @@
 // 1. CONFIGURATION
 // ==========================================
 
-// Approximate center of Manolo Fortich, Bukidnon
+// Approximate center of Manolo Fortich
 const MANOLO_FORTICH = {
     lat: 8.369,
     lng: 124.865
 };
 
 const CONFIG = {
+
     mapZoom: 13,
+
     destinationRadius: 15000,
 
     tileURL: "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
@@ -25,6 +27,7 @@ const CONFIG = {
     overpassURL: "https://overpass-api.de/api/interpreter",
 
     osrmURL: "https://router.project-osrm.org/route/v1/driving/"
+
 };
 
 
@@ -54,9 +57,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     initializeMap();
 
-    loadTouristSpots();
-
     setupEventListeners();
+
+    loadTouristSpots();
 
 });
 
@@ -67,25 +70,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function initializeMap() {
 
+    const mapContainer = document.getElementById("map");
+
+    if (!mapContainer || typeof L === "undefined") {
+
+        console.error("Map container or Leaflet is missing.");
+
+        return;
+    }
+
+    // Required map height until a CSS file is added
+    mapContainer.style.height = "500px";
+
     map = L.map("map").setView(
         [MANOLO_FORTICH.lat, MANOLO_FORTICH.lng],
         CONFIG.mapZoom
     );
 
+    // Load OpenStreetMap tiles
+
     L.tileLayer(CONFIG.tileURL, {
+
         maxZoom: 19,
 
         attribution:
             '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+
     }).addTo(map);
 
     // Default municipality marker
+
     L.marker([
         MANOLO_FORTICH.lat,
         MANOLO_FORTICH.lng
     ])
-    .addTo(map)
-    .bindPopup("<b>Manolo Fortich, Bukidnon</b>");
+        .addTo(map)
+        .bindPopup("<b>Manolo Fortich, Bukidnon</b>");
 
 }
 
@@ -95,10 +115,6 @@ function initializeMap() {
 // ==========================================
 
 function setupEventListeners() {
-
-    document
-        .getElementById("locateBtn")
-        .addEventListener("click", getUserLocation);
 
     document
         .getElementById("showMyLocationBtn")
@@ -147,32 +163,40 @@ function getUserLocation() {
                 lng: longitude
             };
 
-            // Remove previous location marker
+            // Remove previous marker
+
             if (userMarker) {
                 map.removeLayer(userMarker);
             }
+
+            // Remove previous accuracy circle
 
             if (userAccuracyCircle) {
                 map.removeLayer(userAccuracyCircle);
             }
 
-            // Create user marker
+            // Create current location marker
+
             userMarker = L.marker([
                 latitude,
                 longitude
             ])
-            .addTo(map)
-            .bindPopup("<b>You are here!</b>");
+                .addTo(map)
+                .bindPopup("<b>You are here!</b>");
 
-            // Show GPS accuracy radius
+            // Create GPS accuracy circle
+
             userAccuracyCircle = L.circle([
                 latitude,
                 longitude
             ], {
+
                 radius: accuracy
+
             }).addTo(map);
 
             // Move map to user's location
+
             map.setView([
                 latitude,
                 longitude
@@ -183,28 +207,42 @@ function getUserLocation() {
             status.textContent =
                 `Location detected! Accuracy: ${Math.round(accuracy)} meters.`;
 
+            // Generate route if destination is already selected
+
+            if (selectedDestination) {
+                generateRoute();
+            }
+
         },
 
         (error) => {
 
-            let message = "";
+            let message;
 
             switch (error.code) {
 
                 case error.PERMISSION_DENIED:
+
                     message = "Location permission was denied.";
+
                     break;
 
                 case error.POSITION_UNAVAILABLE:
+
                     message = "Location information is unavailable.";
+
                     break;
 
                 case error.TIMEOUT:
+
                     message = "Location request timed out.";
+
                     break;
 
                 default:
+
                     message = "Unable to detect your location.";
+
             }
 
             status.textContent = message;
@@ -212,9 +250,13 @@ function getUserLocation() {
         },
 
         {
+
             enableHighAccuracy: true,
+
             timeout: 15000,
+
             maximumAge: 0
+
         }
 
     );
@@ -231,13 +273,15 @@ async function loadTouristSpots() {
     const destinationList =
         document.getElementById("destinationList");
 
-    destinationList.innerHTML =
-        "<p>Loading tourist destinations...</p>";
+    destinationList.textContent =
+        "Loading tourist destinations...";
 
     const query = `
+
         [out:json][timeout:25];
 
         (
+
             node["tourism"~"attraction|museum|viewpoint|artwork"]
                 (around:${CONFIG.destinationRadius},
                 ${MANOLO_FORTICH.lat},
@@ -258,13 +302,20 @@ async function loadTouristSpots() {
                 ${MANOLO_FORTICH.lat},
                 ${MANOLO_FORTICH.lng});
 
+            way["historic"]
+                (around:${CONFIG.destinationRadius},
+                ${MANOLO_FORTICH.lat},
+                ${MANOLO_FORTICH.lng});
+
             node["natural"="waterfall"]
                 (around:${CONFIG.destinationRadius},
                 ${MANOLO_FORTICH.lat},
                 ${MANOLO_FORTICH.lng});
+
         );
 
         out center tags;
+
     `;
 
     try {
@@ -273,17 +324,21 @@ async function loadTouristSpots() {
 
             method: "POST",
 
-            body: "data=" + encodeURIComponent(query),
-
             headers: {
+
                 "Content-Type":
                     "application/x-www-form-urlencoded"
-            }
+
+            },
+
+            body: "data=" + encodeURIComponent(query)
 
         });
 
         if (!response.ok) {
+
             throw new Error("Unable to retrieve destinations.");
+
         }
 
         const data = await response.json();
@@ -296,8 +351,8 @@ async function loadTouristSpots() {
 
         console.error("Overpass Error:", error);
 
-        destinationList.innerHTML =
-            "<p>Unable to load tourist destinations. Please try again later.</p>";
+        destinationList.textContent =
+            "Unable to load tourist destinations. Please try again later.";
 
     }
 
@@ -315,30 +370,52 @@ function displayTouristSpots(spots) {
 
     destinationList.innerHTML = "";
 
-    // Clear existing destination markers
+    // Remove previous markers
+
     destinationMarkers.forEach(marker => {
+
         map.removeLayer(marker);
+
     });
 
     destinationMarkers = [];
 
     if (!spots || spots.length === 0) {
 
-        destinationList.innerHTML =
-            "<p>No tourist spots found in the selected area.</p>";
+        destinationList.textContent =
+            "No tourist spots found in the selected area.";
 
         return;
     }
 
-    spots.forEach((spot) => {
+    // Prevent duplicate destinations
 
-        const latitude =
-            spot.lat ?? spot.center?.lat;
+    const uniqueSpots = new Map();
 
-        const longitude =
-            spot.lon ?? spot.center?.lon;
+    spots.forEach(spot => {
 
-        if (latitude == null || longitude == null) {
+        uniqueSpots.set(
+            `${spot.type}-${spot.id}`,
+            spot
+        );
+
+    });
+
+    // Display destinations
+
+    uniqueSpots.forEach(spot => {
+
+        const latitude = Number(
+            spot.lat ?? spot.center?.lat
+        );
+
+        const longitude = Number(
+            spot.lon ?? spot.center?.lon
+        );
+
+        if (!Number.isFinite(latitude) ||
+            !Number.isFinite(longitude)) {
+
             return;
         }
 
@@ -351,40 +428,72 @@ function displayTouristSpots(spots) {
             spot.tags?.natural ||
             "Landmark";
 
+
+        // CREATE MAP MARKER
+
         const marker = L.marker([
             latitude,
             longitude
         ]).addTo(map);
 
-        marker.bindPopup(`
-            <b>${escapeHTML(name)}</b>
-            <br>
-            Category: ${escapeHTML(category)}
-            <br><br>
-            <button onclick="selectDestination(
-                ${latitude},
-                ${longitude},
-                ${JSON.stringify(name).replace(/</g, "\\u003c")}
-            )">
-                Navigate Here
-            </button>
-        `);
+
+        // CREATE POPUP
+
+        const popupContent = document.createElement("div");
+
+        const popupTitle = document.createElement("strong");
+
+        popupTitle.textContent = name;
+
+        const popupCategory = document.createElement("p");
+
+        popupCategory.textContent = "Category: " + category;
+
+        const popupButton = document.createElement("button");
+
+        popupButton.textContent = "Navigate Here";
+
+        popupButton.addEventListener("click", () => {
+
+            selectDestination(
+                latitude,
+                longitude,
+                name
+            );
+
+        });
+
+        popupContent.appendChild(popupTitle);
+
+        popupContent.appendChild(popupCategory);
+
+        popupContent.appendChild(popupButton);
+
+        marker.bindPopup(popupContent);
 
         destinationMarkers.push(marker);
 
-        // Create destination list item
+
+        // CREATE DESTINATION LIST ITEM
+
         const item = document.createElement("div");
 
         const title = document.createElement("h3");
+
         title.textContent = name;
 
         const categoryText = document.createElement("p");
+
         categoryText.textContent = "Category: " + category;
 
-        const button = document.createElement("button");
-        button.textContent = "View on Map";
 
-        button.addEventListener("click", () => {
+        // VIEW ON MAP BUTTON
+
+        const viewButton = document.createElement("button");
+
+        viewButton.textContent = "View on Map";
+
+        viewButton.addEventListener("click", () => {
 
             map.setView([
                 latitude,
@@ -394,6 +503,9 @@ function displayTouristSpots(spots) {
             marker.openPopup();
 
         });
+
+
+        // NAVIGATE HERE BUTTON
 
         const navigateButton = document.createElement("button");
 
@@ -409,9 +521,15 @@ function displayTouristSpots(spots) {
 
         });
 
+
+        // APPEND ELEMENTS
+
         item.appendChild(title);
+
         item.appendChild(categoryText);
-        item.appendChild(button);
+
+        item.appendChild(viewButton);
+
         item.appendChild(navigateButton);
 
         destinationList.appendChild(item);
@@ -435,17 +553,25 @@ async function searchDestination(event) {
     const results =
         document.getElementById("searchResults");
 
+    const searchButton =
+        document.getElementById("searchBtn");
+
     const searchValue = input.value.trim();
 
-    if (!searchValue) return;
+    if (!searchValue) {
+        return;
+    }
 
     results.textContent = "Searching...";
+
+    searchButton.disabled = true;
 
     try {
 
         const params = new URLSearchParams({
 
-            q: searchValue + ", Manolo Fortich, Bukidnon, Philippines",
+            q: searchValue +
+                ", Manolo Fortich, Bukidnon, Philippines",
 
             format: "json",
 
@@ -460,7 +586,9 @@ async function searchDestination(event) {
         );
 
         if (!response.ok) {
+
             throw new Error("Search request failed.");
+
         }
 
         const data = await response.json();
@@ -495,9 +623,15 @@ async function searchDestination(event) {
                     place.display_name
                 );
 
+                document.getElementById("map-section")
+                    .scrollIntoView({
+                        behavior: "smooth"
+                    });
+
             });
 
             item.appendChild(name);
+
             item.appendChild(button);
 
             results.appendChild(item);
@@ -511,7 +645,13 @@ async function searchDestination(event) {
         console.error("Search Error:", error);
 
         results.textContent =
-            "An error occurred while searching.";
+            "An error occurred while searching. Please try again.";
+
+    }
+
+    finally {
+
+        searchButton.disabled = false;
 
     }
 
@@ -524,10 +664,20 @@ async function searchDestination(event) {
 
 function selectDestination(latitude, longitude, name) {
 
+    if (!Number.isFinite(latitude) ||
+        !Number.isFinite(longitude)) {
+
+        return;
+    }
+
     selectedDestination = {
+
         lat: latitude,
+
         lng: longitude,
+
         name: name
+
     };
 
     map.setView([
@@ -535,17 +685,28 @@ function selectDestination(latitude, longitude, name) {
         longitude
     ], 15);
 
-    // Automatically generate route if location exists
+    // Generate route if current location is available
+
     if (userLocation) {
 
         generateRoute();
 
-    } else {
+    }
 
-        document.getElementById("routeInformation").innerHTML =
-            "<p>Destination selected: " +
-            escapeHTML(name) +
-            "</p><p>Please enable your current location to generate a route.</p>";
+    else {
+
+        const information =
+            document.getElementById("routeInformation");
+
+        information.innerHTML = "";
+
+        const message = document.createElement("p");
+
+        message.textContent =
+            "Destination selected: " + name +
+            ". Please detect your current location to generate a route.";
+
+        information.appendChild(message);
 
     }
 
@@ -559,8 +720,6 @@ function selectDestination(latitude, longitude, name) {
 async function generateRoute() {
 
     if (!userLocation || !selectedDestination) {
-
-        alert("Please select a destination and detect your location.");
 
         return;
     }
@@ -584,7 +743,9 @@ async function generateRoute() {
         const response = await fetch(url);
 
         if (!response.ok) {
+
             throw new Error("Routing service unavailable.");
+
         }
 
         const data = await response.json();
@@ -597,17 +758,23 @@ async function generateRoute() {
 
         const route = data.routes[0];
 
-        // Remove previous route
+
+        // REMOVE PREVIOUS ROUTE
+
         if (currentRoute) {
+
             map.removeLayer(currentRoute);
+
         }
 
-        // Draw route on map
+
+        // DRAW ROUTE ON MAP
+
         currentRoute = L.geoJSON(route.geometry, {
 
             style: {
 
-                color: "blue",
+                color: "#ffb900",
 
                 weight: 5,
 
@@ -617,17 +784,25 @@ async function generateRoute() {
 
         }).addTo(map);
 
-        // Fit map to route
+
+        // FIT MAP TO ROUTE
+
         map.fitBounds(
             currentRoute.getBounds(),
-            { padding: [30, 30] }
+            {
+                padding: [30, 30]
+            }
         );
 
-        // Convert meters to kilometers
+
+        // CALCULATE DISTANCE
+
         const distance =
             (route.distance / 1000).toFixed(2);
 
-        // Convert seconds to minutes
+
+        // CALCULATE TRAVEL TIME
+
         const duration =
             Math.round(route.duration / 60);
 
@@ -637,34 +812,49 @@ async function generateRoute() {
         const minutes =
             duration % 60;
 
-        const estimatedTime =
-            hours > 0
-                ? `${hours} hour(s) ${minutes} minute(s)`
-                : `${minutes} minutes`;
+        const estimatedTime = hours > 0
+            ? `${hours} hour(s) ${minutes} minute(s)`
+            : `${minutes} minutes`;
 
-        information.innerHTML = `
-            <h3>Route Information</h3>
 
-            <p>
-                <b>Destination:</b>
-                ${escapeHTML(selectedDestination.name)}
-            </p>
+        // DISPLAY ROUTE INFORMATION
 
-            <p>
-                <b>Distance:</b>
-                ${distance} km
-            </p>
+        information.innerHTML = "";
 
-            <p>
-                <b>Estimated Travel Time:</b>
-                ${estimatedTime}
-            </p>
+        const title = document.createElement("h3");
 
-            <p>
-                <b>Travel Mode:</b>
-                Driving
-            </p>
-        `;
+        title.textContent = "Route Information";
+
+        const destination = document.createElement("p");
+
+        destination.textContent =
+            "Destination: " + selectedDestination.name;
+
+        const distanceInfo = document.createElement("p");
+
+        distanceInfo.textContent =
+            "Distance: " + distance + " km";
+
+        const timeInfo = document.createElement("p");
+
+        timeInfo.textContent =
+            "Estimated Travel Time: " + estimatedTime;
+
+        const modeInfo = document.createElement("p");
+
+        modeInfo.textContent =
+            "Travel Mode: Driving";
+
+
+        information.appendChild(title);
+
+        information.appendChild(destination);
+
+        information.appendChild(distanceInfo);
+
+        information.appendChild(timeInfo);
+
+        information.appendChild(modeInfo);
 
     }
 
@@ -686,6 +876,8 @@ async function generateRoute() {
 
 function clearRoute() {
 
+    // Remove route from map
+
     if (currentRoute) {
 
         map.removeLayer(currentRoute);
@@ -694,55 +886,13 @@ function clearRoute() {
 
     }
 
+    // Reset selected destination
+
     selectedDestination = null;
 
-    document.getElementById("routeInformation").innerHTML =
-        "<p>No destination selected.</p>";
+    // Reset route information
+
+    document.getElementById("routeInformation").textContent =
+        "No destination selected.";
 
 }
-
-
-// ==========================================
-// 13. HTML ESCAPING
-// ==========================================
-
-function escapeHTML(value) {
-
-    return String(value).replace(/[&<>"']/g, character => {
-
-        const entities = {
-
-            "&": "&amp;",
-            "<": "&lt;",
-            ">": "&gt;",
-            '"': "&quot;",
-            "'": "&#039;"
-
-        };
-
-        return entities[character];
-
-    });
-
-}
-
-const popupContent = document.createElement("div");
-
-const popupTitle = document.createElement("strong");
-popupTitle.textContent = name;
-
-const popupCategory = document.createElement("p");
-popupCategory.textContent = "Category: " + category;
-
-const navigateButton = document.createElement("button");
-navigateButton.textContent = "Navigate Here";
-
-navigateButton.addEventListener("click", () => {
-    selectDestination(latitude, longitude, name);
-});
-
-popupContent.appendChild(popupTitle);
-popupContent.appendChild(popupCategory);
-popupContent.appendChild(navigateButton);
-
-marker.bindPopup(popupContent);

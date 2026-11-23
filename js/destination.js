@@ -3,10 +3,10 @@ const destinationData = {
     "dahilayan-adventure-park": {
         name: "Dahilayan Adventure Park",
         location: "Dahilayan, Manolo Fortich, Bukidnon",
-        description: "Dahilayan Adventure Park is an outdoor adventure destination in the highlands of Manolo Fortich. It is known for recreational activities and attractions for visitors seeking an outdoor experience.",
+        description: "Dahilayan Forest Park is a nature and adventure destination located in Barangay Dahilayan, Manolo Fortich, Bukidnon. Known for its cool mountain climate, lush forest surroundings, and scenic landscapes, it offers visitors a place to enjoy outdoor recreation and experience the natural beauty of the highlands. The destination is part of the Dahilayan tourism area, which features various recreational attractions and outdoor activities suitable for families, friends, and adventure enthusiasts. Its mountain setting and refreshing atmosphere make it an ideal destination for sightseeing, leisure, and outdoor exploration.",
         search: "Dahilayan Adventure Park, Manolo Fortich, Bukidnon",
         folder: "dahilayan-adventure-park",
-        photos: ["adventure.jpg", "entrance.jpg", "nightView.jpg"]
+        photos: ["1.avif","2.jpg", "3.jpg", "4.jpg", "adventure.jpg", "entrance.jpg", "nightView.jpg"]
     },
 
     "kampojuan": {
@@ -46,19 +46,25 @@ const destinationData = {
     }
 };
 
+
+// GLOBAL VARIABLES
 let map;
 let destinationMarker;
 let userMarker;
 let routeLine;
+
 let currentPhotoIndex = 0;
 let currentDestination;
 let destinationCoordinates = null;
 
+let autoSlideTimer = null;
 
-// Load the selected destination
+
+// LOAD DESTINATION
 document.addEventListener("DOMContentLoaded", function () {
 
     const destinationKey = document.body.dataset.destination;
+
     currentDestination = destinationData[destinationKey];
 
     if (!currentDestination) {
@@ -73,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// Display destination information
+// DISPLAY DESTINATION INFORMATION
 function displayDestination() {
 
     document.getElementById("destinationName").textContent =
@@ -89,15 +95,13 @@ function displayDestination() {
 }
 
 
-// Display slideshow photo
+// DISPLAY CURRENT PHOTO
 function showPhoto() {
-
     const photo = currentDestination.photos[currentPhotoIndex];
 
     const destinationImage =
         document.getElementById("destinationPhoto");
 
-    // Image path relative to the destinations HTML folder
     const imagePath =
         "../images/destinations/" +
         currentDestination.folder + "/" + photo;
@@ -105,61 +109,133 @@ function showPhoto() {
     destinationImage.alt =
         currentDestination.name + " photo " + (currentPhotoIndex + 1);
 
-    // Check if the image exists
-    destinationImage.onerror = function () {
+    const newImage = new Image();
 
-        console.error("Unable to load image:", imagePath);
+    newImage.onload = function () {
+        destinationImage.src = imagePath;
 
-        destinationImage.onerror = null;
-        destinationImage.removeAttribute("src");
-
-        destinationImage.alt =
-            "Image not found: " + photo;
+        // Restart fade-in animation
+        destinationImage.classList.remove("fade-in");
+        void destinationImage.offsetWidth;
+        destinationImage.classList.add("fade-in");
     };
 
-    // Load the image
-    destinationImage.src = imagePath;
+    newImage.onerror = function () {
+        console.error("Unable to load image:", imagePath);
+    };
+
+    newImage.src = imagePath;
 
     document.getElementById("photoCounter").textContent =
         (currentPhotoIndex + 1) + " / " +
         currentDestination.photos.length;
 }
 
+// NEXT PHOTO
+function nextPhoto() {
 
-// Slideshow buttons
-function setupButtons() {
+    currentPhotoIndex++;
 
-    document.getElementById("nextPhoto").addEventListener("click", function () {
+    if (currentPhotoIndex >= currentDestination.photos.length) {
+        currentPhotoIndex = 0;
+    }
 
-        currentPhotoIndex++;
-
-        if (currentPhotoIndex >= currentDestination.photos.length) {
-            currentPhotoIndex = 0;
-        }
-
-        showPhoto();
-    });
-
-    document.getElementById("previousPhoto").addEventListener("click", function () {
-
-        currentPhotoIndex--;
-
-        if (currentPhotoIndex < 0) {
-            currentPhotoIndex = currentDestination.photos.length - 1;
-        }
-
-        showPhoto();
-    });
-
-    document.getElementById("showMyLocationBtn")
-        .addEventListener("click", getCurrentLocation);
-
-    document.getElementById("clearRouteBtn")
-        .addEventListener("click", clearRoute);
+    showPhoto();
 }
 
 
-// Initialize Leaflet map
+// PREVIOUS PHOTO
+function previousPhoto() {
+
+    currentPhotoIndex--;
+
+    if (currentPhotoIndex < 0) {
+        currentPhotoIndex = currentDestination.photos.length - 1;
+    }
+
+    showPhoto();
+}
+
+
+// AUTOMATIC SLIDESHOW
+function startAutoSlide() {
+
+    clearInterval(autoSlideTimer);
+
+    if (currentDestination.photos.length <= 1) {
+        return;
+    }
+
+    autoSlideTimer = setInterval(function () {
+
+        nextPhoto();
+
+    }, 3000);
+}
+
+
+// RESET TIMER AFTER MANUAL CLICK
+function resetAutoSlide() {
+
+    startAutoSlide();
+}
+
+
+// SETUP BUTTONS
+function setupButtons() {
+
+    // NEXT BUTTON
+    document.getElementById("nextPhoto")
+        .addEventListener("click", function () {
+
+            nextPhoto();
+
+            // Restart the 3-second timer
+            resetAutoSlide();
+        });
+
+
+    // PREVIOUS BUTTON
+    document.getElementById("previousPhoto")
+        .addEventListener("click", function () {
+
+            previousPhoto();
+
+            // Restart the 3-second timer
+            resetAutoSlide();
+        });
+
+
+    // LOCATION BUTTON
+    document.getElementById("showMyLocationBtn")
+        .addEventListener("click", getCurrentLocation);
+
+
+    // CLEAR ROUTE BUTTON
+    document.getElementById("clearRouteBtn")
+        .addEventListener("click", clearRoute);
+
+
+    // START AUTOMATIC SLIDESHOW
+    startAutoSlide();
+}
+
+
+// PAUSE WHEN TAB IS HIDDEN
+document.addEventListener("visibilitychange", function () {
+
+    if (document.hidden) {
+
+        clearInterval(autoSlideTimer);
+
+    } else if (currentDestination) {
+
+        startAutoSlide();
+    }
+});
+
+
+// INITIALIZE LEAFLET MAP
 function initializeMap() {
 
     map = L.map("map").setView([8.369, 124.865], 12);
@@ -169,7 +245,6 @@ function initializeMap() {
         attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
-    // Display coordinates when the map is clicked
     map.on("click", function (event) {
 
         const lat = event.latlng.lat;
@@ -186,7 +261,7 @@ function initializeMap() {
 }
 
 
-// Find destination coordinates using OpenStreetMap
+// LOCATE DESTINATION USING OPENSTREETMAP
 async function locateDestination() {
 
     const status = document.getElementById("locationStatus");
@@ -208,8 +283,10 @@ async function locateDestination() {
         const results = await response.json();
 
         if (results.length === 0) {
+
             status.textContent =
                 "Destination coordinates were not found. Try again later.";
+
             return;
         }
 
@@ -234,13 +311,16 @@ async function locateDestination() {
 }
 
 
-// Get visitor's current GPS location
+// GET VISITOR'S CURRENT GPS LOCATION
 function getCurrentLocation() {
 
     const status = document.getElementById("locationStatus");
 
     if (!navigator.geolocation) {
-        status.textContent = "Geolocation is not supported by this browser.";
+
+        status.textContent =
+            "Geolocation is not supported by this browser.";
+
         return;
     }
 
@@ -270,8 +350,11 @@ function getCurrentLocation() {
                 "Your current location has been found.";
 
             if (destinationCoordinates) {
+
                 getRoute(userCoordinates, destinationCoordinates);
+
             } else {
+
                 status.textContent +=
                     " Destination coordinates are not available yet.";
             }
@@ -280,15 +363,22 @@ function getCurrentLocation() {
         function (error) {
 
             if (error.code === error.PERMISSION_DENIED) {
+
                 status.textContent =
                     "Location permission was denied. Please allow GPS access.";
+
             } else if (error.code === error.POSITION_UNAVAILABLE) {
+
                 status.textContent =
                     "Your current location is unavailable.";
+
             } else if (error.code === error.TIMEOUT) {
+
                 status.textContent =
                     "Getting your location timed out. Try again.";
+
             } else {
+
                 status.textContent =
                     "An error occurred while getting your location.";
             }
@@ -303,10 +393,11 @@ function getCurrentLocation() {
 }
 
 
-// Get route using OSRM
+// GET ROUTE USING OSRM
 async function getRoute(start, end) {
 
-    const information = document.getElementById("routeInformation");
+    const information =
+        document.getElementById("routeInformation");
 
     information.textContent = "Calculating route...";
 
@@ -358,10 +449,11 @@ async function getRoute(start, end) {
 }
 
 
-// Clear route from map
+// CLEAR ROUTE FROM MAP
 function clearRoute() {
 
     if (routeLine) {
+
         map.removeLayer(routeLine);
         routeLine = null;
     }

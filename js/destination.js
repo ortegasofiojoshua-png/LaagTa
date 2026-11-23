@@ -1,3 +1,4 @@
+
 const destinationData = {
     "dahilayan-adventure-park": {
         name: "Dahilayan Adventure Park",
@@ -5,25 +6,7 @@ const destinationData = {
         description: "Dahilayan Adventure Park is an outdoor adventure destination in the highlands of Manolo Fortich. It is known for recreational activities and attractions for visitors seeking an outdoor experience.",
         search: "Dahilayan Adventure Park, Manolo Fortich, Bukidnon",
         folder: "dahilayan-adventure-park",
-        photos: ["1.jpg", "2.jpg", "3.jpg"]
-    },
-
-    "dahilayan-forest-park": {
-        name: "Dahilayan Forest Park",
-        location: "Dahilayan, Manolo Fortich, Bukidnon",
-        description: "Dahilayan Forest Park is a nature destination surrounded by forest scenery and cool mountain surroundings. It offers visitors an opportunity to enjoy the natural environment of the highlands.",
-        search: "Dahilayan Forest Park, Manolo Fortich, Bukidnon",
-        folder: "dahilayan-forest-park",
-        photos: ["1.jpg", "2.jpg", "3.jpg"]
-    },
-
-    "dahilayan-alpine-village": {
-        name: "Dahilayan Alpine Village and Kawa Hot Bath",
-        location: "Dahilayan, Manolo Fortich, Bukidnon",
-        description: "Dahilayan Alpine Village is a mountain attraction with an alpine-inspired setting. Visitors can also experience the Kawa Hot Bath, a relaxing activity associated with the area.",
-        search: "Dahilayan Alpine Village, Manolo Fortich, Bukidnon",
-        folder: "dahilayan-alpine-village",
-        photos: ["1.jpg", "2.jpg", "3.jpg"]
+        photos: ["adventure.jpg", "entrance.jpg", "nightView.jpg"]
     },
 
     "kampojuan": {
@@ -44,15 +27,6 @@ const destinationData = {
         photos: ["1.jpg", "2.jpg", "3.jpg"]
     },
 
-    "sumalsag-cave": {
-        name: "Sumalsag Cave and View Decks",
-        location: "Manolo Fortich, Bukidnon",
-        description: "Sumalsag Cave and its view decks are natural attractions where visitors can appreciate the landscape and scenery of the surrounding area.",
-        search: "Sumalsag Cave View Deck, Manolo Fortich, Bukidnon",
-        folder: "sumalsag-cave",
-        photos: ["1.jpg", "2.jpg", "3.jpg"]
-    },
-
     "macarthur-landmark": {
         name: "General Douglas MacArthur Landmark",
         location: "Manolo Fortich, Bukidnon",
@@ -69,15 +43,6 @@ const destinationData = {
         search: "Mangima Heroes Shrine, Manolo Fortich, Bukidnon",
         folder: "mangima-heroes-shrine",
         photos: ["1.jpg", "2.jpg", "3.jpg"]
-    },
-
-    "municipal-museum": {
-        name: "Manolo Fortich Municipal Museum",
-        location: "Manolo Fortich, Bukidnon",
-        description: "The Manolo Fortich Municipal Museum provides visitors with an opportunity to learn about the municipality's history, culture, and local heritage.",
-        search: "Manolo Fortich Municipal Museum, Bukidnon",
-        folder: "municipal-museum",
-        photos: ["1.jpg", "2.jpg", "3.jpg"]
     }
 };
 
@@ -88,6 +53,7 @@ let routeLine;
 let currentPhotoIndex = 0;
 let currentDestination;
 let destinationCoordinates = null;
+
 
 // Load the selected destination
 document.addEventListener("DOMContentLoaded", function () {
@@ -128,12 +94,31 @@ function showPhoto() {
 
     const photo = currentDestination.photos[currentPhotoIndex];
 
-    document.getElementById("destinationPhoto").src =
+    const destinationImage =
+        document.getElementById("destinationPhoto");
+
+    // Image path relative to the destinations HTML folder
+    const imagePath =
         "../images/destinations/" +
         currentDestination.folder + "/" + photo;
 
-    document.getElementById("destinationPhoto").alt =
+    destinationImage.alt =
         currentDestination.name + " photo " + (currentPhotoIndex + 1);
+
+    // Check if the image exists
+    destinationImage.onerror = function () {
+
+        console.error("Unable to load image:", imagePath);
+
+        destinationImage.onerror = null;
+        destinationImage.removeAttribute("src");
+
+        destinationImage.alt =
+            "Image not found: " + photo;
+    };
+
+    // Load the image
+    destinationImage.src = imagePath;
 
     document.getElementById("photoCounter").textContent =
         (currentPhotoIndex + 1) + " / " +

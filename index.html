@@ -4,186 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>LaagTa | Explore Manolo Fortich</title>
-
-    <!-- Leaflet Map CSS Library -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
 
 <body>
 
-    <!-- HEADER -->
     <header>
-
-        <img src="images/logo.png" alt="LaagTa Logo" width="220">
-
-        <p>Explore the beauty of Manolo Fortich, Bukidnon</p>
+        <img src="images/logo.png" alt="LaagTa Logo" width="100">
+        <h1>LaagTa</h1>
+        <p>Discover the beautiful destinations of Manolo Fortich, Bukidnon.</p>
 
         <nav>
-            <a href="#home">Home</a>
-            <a href="#search-section">Search</a>
-            <a href="#destinations">Destinations</a>
-            <a href="#map-section">Explore Map</a>
+            <a href="index.html">Home</a>
+            <a href="#destinations">Landmarks & Tourist Spots</a>
         </nav>
-
     </header>
 
-
     <main>
-
-        <!-- HOME SECTION -->
-        <section id="home">
-
-            <h1>Discover Manolo Fortich</h1>
-
-            <img src="images/home.jpg" alt="Manolo Fortich, Bukidnon" width="100%"
-                style="max-width: 960px; height: auto;">
-
+        <section>
+            <img src="images/home.jpg" alt="Manolo Fortich" width="100%">
+            <h2>Discover Manolo Fortich</h2>
             <p>
-                Explore beautiful landmarks, tourist attractions,
-                and destinations around Manolo Fortich.
+                Explore the landmarks, natural attractions, and adventure
+                destinations of Manolo Fortich, Bukidnon.
             </p>
-
-            <a href="#destinations">Explore Destinations</a>
-
         </section>
 
-        <hr>
-
-
-        <!-- SEARCH SECTION -->
-        <section id="search-section">
-
-            <h2>Find a Destination</h2>
-
-            <p>
-                Search for tourist spots and places around
-                Manolo Fortich.
-            </p>
-
-            <form id="searchForm">
-
-                <input type="search" id="destinationInput" placeholder="Search a destination or place..." required>
-
-                <button type="submit" id="searchBtn">
-                    Search
-                </button>
-
-            </form>
-
-            <div id="searchResults" aria-live="polite"></div>
-
-        </section>
-
-        <hr>
-
-
-        <!-- DESTINATIONS SECTION -->
         <section id="destinations">
+            <h2>Landmarks & Tourist Spots</h2>
+            <p>Choose a destination to learn more about it.</p>
 
-            <h2>Tourist Spots and Landmarks</h2>
+            <input type="text" id="searchInput" placeholder="Search destinations...">
+            <button id="searchButton">Search</button>
 
-            <p>
-                Discover tourist attractions and interesting
-                places around Manolo Fortich.
-            </p>
-
-            <div id="destinationList">
-                <p>Loading destinations...</p>
-            </div>
-
+            <div id="destinationList"></div>
         </section>
-
-        <hr>
-
-
-        <!-- MAP SECTION -->
-        <section id="map-section">
-
-            <h2>Explore the Map</h2>
-
-            <p>
-                View your location and discover destinations
-                around Manolo Fortich.
-            </p>
-
-            <div id="map"></div>
-
-            <br>
-
-            <button id="showMyLocationBtn">
-                Show My Location
-            </button>
-
-            <button id="clearRouteBtn">
-                Clear Route
-            </button>
-
-            <p id="locationStatus" aria-live="polite">
-                Your location has not been detected yet.
-            </p>
-
-        </section>
-
-        <hr>
-
-
-        <!-- NAVIGATION INFORMATION -->
-        <section id="navigation-section">
-
-            <h2>Navigation Information</h2>
-
-            <div id="routeInformation">
-                <p>No destination selected.</p>
-            </div>
-
-        </section>
-
-        <hr>
-
-
-        <!-- WEATHER SECTION -->
-        <section id="weather-section">
-
-            <h2>Weather Information</h2>
-
-            <p>
-                Weather information and forecasts for Manolo
-                Fortich will be available in a future update.
-            </p>
-
-        </section>
-
     </main>
 
-
-    <!-- FOOTER -->
     <footer>
-
-        <img src="images/logo.png" alt="LaagTa Logo" width="130">
-
-        <p>
-            Explore the beauty of Manolo Fortich, Bukidnon.
-        </p>
-
-        <p>
-            &copy; 2026 LaagTa - Explore Manolo Fortich
-        </p>
-
-        <p>
-            Map data &copy; OpenStreetMap contributors.
-        </p>
-
+        <p>LaagTa | Explore Manolo Fortich, Bukidnon</p>
     </footer>
 
-
-    <!-- Leaflet JavaScript -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-    <!-- Application JavaScript -->
-    <script src="js/app.js"></script>
-
+    <script src="js/home.js"></script>
 </body>
 
 </html>

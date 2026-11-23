@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LaagTa | Explore Manolo Fortich</title>
+
+    <!-- Leaflet CSS (library requirement, not custom styling) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>LaagTa</h1>
+        <p>Explore the beauty of Manolo Fortich, Bukidnon</p>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#destinations">Destinations</a>
+            <a href="#map-section">Explore Map</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HOME SECTION -->
+        <section id="home">
+            <h2>Discover Manolo Fortich</h2>
+
+            <p>
+                Explore beautiful landmarks, tourist attractions,
+                and destinations around Manolo Fortich.
+            </p>
+
+            <button id="locateBtn">
+                Find My Current Location
+            </button>
+
+            <p id="locationStatus">
+                Your location has not been detected yet.
+            </p>
+        </section>
+
+        <hr>
+
+        <!-- SEARCH SECTION -->
+        <section id="search-section">
+            <h2>Find a Destination</h2>
+
+            <form id="searchForm">
+                <input type="search" id="destinationInput" placeholder="Search a destination or place..." required>
+
+                <button type="submit">
+                    Search
+                </button>
+            </form>
+
+            <div id="searchResults"></div>
+        </section>
+
+        <hr>
+
+        <!-- MAP SECTION -->
+        <section id="map-section">
+
+            <h2>Explore the Map</h2>
+
+            <p>
+                View your location and discover destinations
+                around Manolo Fortich.
+            </p>
+
+            <div id="map" style="height: 500px; width: 100%;"></div>
+
+            <br>
+
+            <button id="showMyLocationBtn">
+                Show My Location
+            </button>
+
+            <button id="clearRouteBtn">
+                Clear Route
+            </button>
+
+        </section>
+
+        <hr>
+
+        <!-- DESTINATIONS SECTION -->
+        <section id="destinations">
+
+            <h2>Tourist Spots and Landmarks</h2>
+
+            <p>
+                Discover tourist attractions and interesting
+                places around Manolo Fortich.
+            </p>
+
+            <div id="destinationList">
+                <p>Loading destinations...</p>
+            </div>
+
+        </section>
+
+        <hr>
+
+        <!-- ROUTE INFORMATION -->
+        <section id="navigation-section">
+
+            <h2>Navigation Information</h2>
+
+            <div id="routeInformation">
+                <p>No destination selected.</p>
+            </div>
+
+        </section>
+
+        <hr>
+
+        <!-- WEATHER SECTION - FUTURE FEATURE -->
+        <section id="weather-section">
+
+            <h2>Weather Information</h2>
+
+            <p>
+                Weather information will be available in a
+                future update.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            &copy; 2026 LaagTa - Explore Manolo Fortich
+        </p>
+        <p>
+            Map data © OpenStreetMap contributors
+        </p>
+    </footer>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Application JavaScript -->
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

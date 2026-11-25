@@ -58,6 +58,8 @@ const destinationData = {
 
     folder: "del-monte-pineapple-plantation",
 
+    coordinates: [8.3169, 124.8275],
+
     photos: ["1.jpg", "2.jpg", "3.jpg", "4.webp", "5.avif"],
   },
 

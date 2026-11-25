@@ -43,7 +43,7 @@ const destinations = [
     name: "Manolo Fortich Bus Terminal",
     description:
       "A public transportation hub located in Tankulan, Manolo Fortich, Bukidnon. It serves commuters traveling to nearby municipalities and cities.",
-    image: "images/destinations/manolo-terminal/terminal.jpg",
+    image: "images/destinations/manolo-terminal/terminal.png",
     link: "destinations/manoloTerminal.html",
   },
 ];

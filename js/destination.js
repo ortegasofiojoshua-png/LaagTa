@@ -102,7 +102,11 @@ const destinationData = {
 
     folder: "manolo-terminal",
 
-    photos: ["terminal.jpg"],
+    photos: ["terminal.png"],
+
+    description:
+      "Manolo Fortich Bus Terminal is a public transportation hub located in Tankulan, Manolo Fortich, Bukidnon.",
+    photos: ["../images/destinations/manolo-terminal/terminal.png"],
   },
 };
 

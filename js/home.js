@@ -35,7 +35,9 @@ const destinations = [
     name: "Mangima Heroes Shrine",
     description:
       "A historical memorial honoring heroes and remembering the past.",
-    image: "images/destinations/mangima-heroes-shrine/1.jpg",
+    image: "images/destinations/mangima-heroes-shrine/mangima1.png",
+    image: "images/destinations/mangima-heroes-shrine/mangima2.png",
+    image: "images/destinations/mangima-heroes-shrine/mangima3.png",
     link: "destinations/mangima-heroes-shrine.html",
   },
 

@@ -86,7 +86,7 @@ const destinationData = {
 
     folder: "mangima-heroes-shrine",
 
-    photos: ["1.jpg", "2.jpg", "3.jpg"],
+    photos: ["mangima1.png", "mangima2.png", "mangima3.png"],
   },
   "manolo-terminal": {
     name: "Manolo Fortich Bus Terminal",

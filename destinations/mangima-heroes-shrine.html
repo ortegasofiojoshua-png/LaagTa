@@ -3,20 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore Mangima Heroes Shrine in Mangima, Manolo Fortich, Bukidnon, Philippines—discover its wartime history, scenic canyon views, photos, directions, and local weather on LaagTa."
+    />
 
     <title>LaagTa | Mangima Heroes Shrine</title>
 
     <link rel="stylesheet" href="../css/style.css" />
-
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
     />
   </head>
 
   <body data-destination="mangima-heroes-shrine">
     <header>
-      <a href="../index.html">Back to Home</a>
+      <nav aria-label="Breadcrumb">
+        <a href="../index.html">Back to Home</a>
+      </nav>
 
       <h1 id="destinationName">Mangima Heroes Shrine</h1>
 
@@ -27,77 +34,113 @@
 
     <main>
       <!-- PHOTOS -->
-      <section>
-        <h2>Photos</h2>
+      <section aria-labelledby="photosHeading">
+        <h2 id="photosHeading">Photos</h2>
 
-        <div class="slideshow">
-          <img
-            id="destinationPhoto"
-            src="../images/destinations/mangima-heroes-shrine/mangima1.png"
-            data-photos="../images/destinations/mangima-heroes-shrine/mangima1.png,../images/destinations/mangima-heroes-shrine/mangima2.png,../images/destinations/mangima-heroes-shrine/mangima3.png"
-            alt="Mangima Heroes Shrine"
-            width="500"
-          />
+        <div
+          class="slideshow"
+          role="region"
+          aria-label="Destination photo gallery"
+        >
+          <figure>
+            <img
+              id="destinationPhoto"
+              src="../images/destinations/mangima-heroes-shrine/mangima1.png"
+              data-photos="../images/destinations/mangima-heroes-shrine/mangima1.png,../images/destinations/mangima-heroes-shrine/mangima2.png,../images/destinations/mangima-heroes-shrine/mangima3.png"
+              alt="Mangima Heroes Shrine photo 1"
+              width="700"
+              loading="eager"
+            />
+          </figure>
 
-          <div>
-            <button id="previousPhoto">Previous</button>
+          <div class="slideshow-controls">
+            <button
+              type="button"
+              id="previousPhoto"
+              aria-label="Previous photo"
+            >
+              Previous
+            </button>
 
-            <span id="photoCounter">1 / 3</span>
+            <span id="photoCounter" aria-live="polite">1 / 3</span>
 
-            <button id="nextPhoto">Next</button>
+            <button type="button" id="nextPhoto" aria-label="Next photo">
+              Next
+            </button>
           </div>
         </div>
       </section>
 
       <!-- ABOUT -->
-      <section>
-        <h2>About This Destination</h2>
+      <section aria-labelledby="aboutHeading">
+        <h2 id="aboutHeading">About This Destination</h2>
 
         <p id="destinationDescription">
-          Mangima Heroes Shrine is a historical memorial located in Mangima,
-          Manolo Fortich, Bukidnon. It honors heroes and commemorates events
-          from the past. It is a place of remembrance and historical interest.
+          Mangima Heroes Shrine is a historical landmark and memorial situated
+          along the scenic Mangima Canyon in Manolo Fortich, Bukidnon. Built to
+          honor the courage and sacrifice of Filipino soldiers and local freedom
+          fighters who defended the region during World War II, the shrine
+          stands as a lasting tribute to Bukidnon's wartime heritage.
+        </p>
+
+        <p>
+          Surrounded by lush mountain greenery, crisp highland air, and the
+          winding roads of Sayre Highway, the site features life-sized
+          commemorative sculptures depicting soldiers and locals in historical
+          scenes. Today, it serves as both a solemn place of remembrance and a
+          popular stopover where travelers can reflect on local history, take
+          photos, and enjoy the natural beauty of northern Bukidnon.
         </p>
       </section>
 
       <!-- MAP -->
-      <section>
-        <h2>Explore the Location</h2>
+      <section aria-labelledby="mapHeading">
+        <h2 id="mapHeading">Explore the Location</h2>
 
         <p>
           Use the map to explore Mangima Heroes Shrine and find your current
           location.
         </p>
 
-        <div id="map" style="height: 450px; width: 100%"></div>
+        <div
+          id="map"
+          role="region"
+          aria-label="Interactive map of Mangima Heroes Shrine"
+          style="height: 450px; width: 100%"
+        ></div>
 
-        <br />
+        <div class="map-controls" style="margin-top: 1rem">
+          <button type="button" id="showMyLocationBtn">
+            Find My Current Location
+          </button>
 
-        <button id="showMyLocationBtn">Find My Current Location</button>
+          <button type="button" id="clearRouteBtn">Clear Route</button>
+        </div>
 
-        <button id="clearRouteBtn">Clear Route</button>
+        <p id="locationStatus" role="status" aria-live="polite"></p>
 
-        <p id="locationStatus"></p>
-
-        <div id="routeInformation"></div>
+        <div id="routeInformation" aria-live="polite"></div>
       </section>
 
       <!-- WEATHER -->
-      <section id="weatherPanel" hidden>
-        <h2>Weather Information</h2>
+      <section id="weatherPanel" aria-labelledby="weatherHeading" hidden>
+        <h2 id="weatherHeading">Weather Information</h2>
 
-        <p id="weatherStatus"></p>
+        <p id="weatherStatus" role="status" aria-live="polite"></p>
 
         <div id="weatherCards"></div>
       </section>
     </main>
 
     <footer>
-      <a href="../index.html"> Return to LaagTa Homepage </a>
+      <a href="../index.html">Return to LaagTa Homepage</a>
     </footer>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
     <script src="../js/destination.js"></script>
   </body>
 </html>

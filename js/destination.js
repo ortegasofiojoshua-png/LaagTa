@@ -88,6 +88,7 @@ const destinationData = {
 
     photos: ["mangima1.png", "mangima2.png", "mangima3.png"],
   },
+
   "manolo-terminal": {
     name: "Manolo Fortich Bus Terminal",
     location: "Tankulan, Manolo Fortich, Bukidnon",
@@ -103,10 +104,64 @@ const destinationData = {
     folder: "manolo-terminal",
 
     photos: ["terminal.png"],
+  },
+
+  // --- LOCAL ATTRACTIONS ---
+  "kumaykay-river-farm": {
+    name: "Kumaykay River Farm",
+    location: "Barangay Dalirig, Manolo Fortich, Bukidnon",
 
     description:
-      "Manolo Fortich Bus Terminal is a public transportation hub located in Tankulan, Manolo Fortich, Bukidnon.",
-    photos: ["../images/destinations/manolo-terminal/terminal.png"],
+      "Kumaykay River Farm is a serene agri-tourism and nature retreat tucked along the banks of the Kumaykay River in Barangay Dalirig, Manolo Fortich, Bukidnon. Surrounded by vibrant gardens, towering trees, and cool mountain waters, it offers visitors a quiet escape from the city, fresh farm-to-table meals, and cozy riverside cottages.",
+
+    search: "Kumaykay River Farm, Dalirig, Manolo Fortich, Bukidnon",
+
+    folder: "kumaykay-river-farm",
+
+    photos: ["kumaykay1.png"],
+  },
+
+  "alalum-falls": {
+    name: "Alalum Falls",
+    location: "Barangay Dalirig, Manolo Fortich, Bukidnon",
+
+    description:
+      "Alalum Falls is one of Manolo Fortich's most iconic natural landmarks, plunging roughly 148 feet down a mossy rock cliff surrounded by dense tropical foliage in Barangay Dalirig, Bukidnon. Located near Sayre Highway, it is a refreshing stopover offering scenic viewpoints and natural beauty.",
+
+    search: "Alalum Falls, Dalirig, Manolo Fortich, Bukidnon",
+
+    folder: "alalum-falls",
+
+    photos: ["alalum1.png"],
+  },
+
+  "mangima-spring-resort": {
+    name: "Mangima Spring Resort",
+    location: "Mangima, Manolo Fortich, Bukidnon",
+
+    description:
+      "Mangima Spring Resort is a classic roadside mountain resort nestled within the lush slopes of Mangima Canyon in Manolo Fortich, Bukidnon, famous for its cool natural spring pools, picnic areas, and fresh highland air along Sayre Highway.",
+
+    search: "Mangima Spring Resort, Mangima, Manolo Fortich, Bukidnon",
+
+    folder: "mangima-spring-resort",
+
+    photos: ["resort1.png"],
+  },
+
+  "manolo-fortich-municipal-plaza": {
+    name: "Manolo Fortich Municipal Plaza",
+    location: "Tankulan (Poblacion), Manolo Fortich, Bukidnon",
+
+    description:
+      "Located in the heart of Barangay Tankulan, the Manolo Fortich Municipal Plaza serves as the lively civic and social center of the municipality, featuring open lawns, shaded walkways, community landmarks, and afternoon and evening local activity.",
+
+    search:
+      "Manolo Fortich Municipal Plaza, Tankulan, Manolo Fortich, Bukidnon",
+
+    folder: "manolo-fortich-municipal-plaza",
+
+    photos: ["plaza1.png"],
   },
 };
 

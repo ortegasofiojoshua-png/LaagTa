@@ -236,7 +236,7 @@ function showPhoto() {
   const destinationImage = document.getElementById("destinationPhoto");
 
   const imagePath =
-    "../images/destinations/" + currentDestination.folder + "/" + photo;
+    "../../images/destinations/" + currentDestination.folder + "/" + photo;
 
   destinationImage.alt =
     currentDestination.name + " photo " + (currentPhotoIndex + 1);
@@ -343,53 +343,62 @@ function initializeMap() {
   if (typeof L === "undefined") {
     status.textContent =
       "Map library could not be loaded. Check your internet connection.";
-
     return;
   }
 
-  map = L.map("map").setView([8.20253, 124.85863], 14);
+  // INITIALIZE MAP
+  map = L.map("map", {
+    center: [8.20253, 124.85863],
+    zoom: 15,
+    zoomControl: true,
+  });
 
-  // PRIMARY MAP TILE PROVIDER
+  // SATELLITE IMAGERY
+  const satelliteMap = L.tileLayer(
+    "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+    {
+      maxZoom: 19,
+      attribution:
+        "Tiles &copy; Esri — Source: Esri, Maxar, Earthstar Geographics, and GIS User Community",
+    },
+  );
 
-  const osmTiles = L.tileLayer(
+  // STREET MAP
+  const streetMap = L.tileLayer(
     "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
     {
       maxZoom: 19,
-
       attribution:
-        '&copy; <a href="https://www.openstreetmap.org/copyright">' +
-        "OpenStreetMap</a> contributors",
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     },
-  ).addTo(map);
+  );
 
-  // FALLBACK MAP TILE PROVIDER
+  // DEFAULT MAP: SATELLITE
+  satelliteMap.addTo(map);
 
-  let fallbackLoaded = false;
+  // MAP LAYER SWITCHER
+  const baseMaps = {
+    "Satellite View": satelliteMap,
+    "Street Map": streetMap,
+  };
 
-  osmTiles.on("tileerror", function () {
-    if (fallbackLoaded) {
-      return;
-    }
+  L.control
+    .layers(baseMaps, null, {
+      collapsed: false,
+      position: "topright",
+    })
+    .addTo(map);
 
-    fallbackLoaded = true;
-
-    console.warn("OSM tiles unavailable. Trying openstreetmap tiles.");
-
-    // ==========================================
-    // OPENSTREETMAP TILE LAYER
-    // ==========================================
-
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      maxZoom: 19,
-
-      attribution:
-        '&copy; <a href="https://www.openstreetmap.org/copyright">' +
-        "OpenStreetMap</a> contributors",
-    }).addTo(map);
-  });
+  // SCALE INDICATOR
+  L.control
+    .scale({
+      imperial: false,
+      metric: true,
+      position: "bottomleft",
+    })
+    .addTo(map);
 
   // MAP CLICK COORDINATES
-
   map.on("click", function (event) {
     const lat = event.latlng.lat;
     const lng = event.latlng.lng;
@@ -397,16 +406,21 @@ function initializeMap() {
     L.popup()
       .setLatLng(event.latlng)
       .setContent(
-        "Latitude: " + lat.toFixed(5) + "<br>Longitude: " + lng.toFixed(5),
+        "<b>Location Coordinates</b><br>" +
+          "Latitude: " +
+          lat.toFixed(5) +
+          "<br>Longitude: " +
+          lng.toFixed(5),
       )
       .openOn(map);
   });
 
-  // ENSURE MAP SIZE IS CORRECT
-
-  requestAnimationFrame(function () {
+  // FIX MAP DISPLAY SIZE
+  setTimeout(function () {
     map.invalidateSize();
-  });
+  }, 300);
+
+  status.textContent = "Map loaded successfully.";
 }
 
 // ==========================================

@@ -5,57 +5,158 @@ const destinations = [
     description:
       "An adventure destination known for outdoor activities and exciting attractions.",
     image: "images/destinations/dahilayan-adventure-park/entrance.jpg",
-    link: "destinations/dahilayan-adventure-park.html",
+    link: "destinations/adventure/dahilayan-adventure-park.html",
   },
-
+  {
+    name: "Communal Ranch",
+    category: "adventure",
+    description:
+      "An adventure destination known for outdoor activities and exciting attractions.",
+    image: "images/destinations/communal-ranch/1.jpg",
+    link: "destinations/adventure/communal-ranch.html",
+  },
+  {
+    name: "Del Monte Golf Course",
+    category: "adventure",
+    description:
+      "An adventure destination known for outdoor activities and exciting attractions.",
+    image: "images/destinations/del-monte-golf-course/1.jpg",
+    link: "destinations/adventure/del-monte-golf-course.html",
+  },
   {
     name: "KampoJuan Eco-Adventure Farm",
     category: "adventure",
     description:
       "An eco-adventure destination offering outdoor experiences and nature activities.",
     image: "images/destinations/kampojuan/1.jpg",
-    link: "destinations/kampojuan-eco-adventure-farm.html",
+    link: "destinations/adventure/kampojuan-eco-adventure-farm.html",
+  },
+
+  {
+    name: "Kumaykay River Farm",
+    category: "adventure",
+    description:
+      "An adventure destination known for outdoor activities and exciting attractions.",
+    image: "images/destinations/kumaykay-river-farm/kumaykay1.png",
+    link: "destinations/adventure/kumaykay-river-farm.html",
+  },
+
+  {
+    name: "View deck Maluko",
+    category: "adventure",
+    description:
+      "An adventure destination known for outdoor activities and exciting attractions.",
+    image: "images/destinations/view-deck-maluko/view1.png",
+    link: "destinations/adventure/view-deck-maluko.html",
   },
 
   {
     name: "Del Monte Pineapple Plantation and Monument",
-    category: "history",
+    category: "key places",
     description:
       "A landmark associated with the area's well-known pineapple plantation and agricultural heritage.",
     image: "images/destinations/del-monte-pineapple-plantation/1.jpg",
-    link: "destinations/del-monte-pineapple-plantation.html",
+    link: "destinations/major-&-historical-places/del-monte-pineapple-plantation.html",
+  },
+
+  {
+    name: "Bukidnon Provincial Hospital",
+    category: "key places",
+    description:
+      "A historical landmark associated with the area's healthcare facilities.",
+    image: "images/destinations/bukidnon-provincial-hospital/hospital1.png",
+    link: "destinations/major-&-historical-places/bukidnon-provincial-hospital.html",
+  },
+  {
+    name: "Our Lady of Perpetual Help Parish Church",
+    category: "historical places",
+    description:
+      "A historical landmark associated with the area's religious heritage.",
+    image:
+      "images/destinations/our-lady-of-perpetual-help-parish-church/church1.png",
+    link: "destinations/major-&-historical-places/our-lady-of-perpetual-help-parish-church.html",
+  },
+
+  {
+    name: "Del Monte Airstrip",
+    category: "historical places",
+    description:
+      "A historical landmark associated with the area's aviation heritage.",
+    image: "images/destinations/del-monte-airstrip/airstrip1.png",
+    link: "destinations/major-&-historical-places/del-monte-airstrip.html",
+  },
+
+  {
+    name: "Del Monte Soccer Field",
+    category: "key places",
+    description:
+      "A historical landmark associated with the area's sports and recreation facilities.",
+    image: "images/destinations/del-monte-soccer-field/1.jpg",
+    link: "destinations/major-&-historical-places/del-monte-soccer-field.html",
+  },
+
+  {
+    name: "Manolo Fortich Municipal Hall",
+    category: "key places",
+    description:
+      "A historical landmark associated with the area's civic heritage.",
+    image: "images/destinations/manolo Fortich-municipal-hall/hall1.png",
+    link: "destinations/major-&-historical-places/manolo Fortich-municipal-hall.html",
+  },
+
+  {
+    name: "Manolo Fortich Municipal Plaza",
+    category: "key places",
+    description:
+      "A historical landmark associated with the area's civic heritage.",
+    image: "images/destinations/manolo Fortich-municipal-plaza/plaza1.png",
+    link: "destinations/major-&-historical-places/manolo Fortich-municipal-plaza.html",
+  },
+
+  {
+    name: "Our Lady of the Immaculate Conception Parish Church",
+    category: "historical places",
+    description:
+      "A historical landmark associated with the area's religious heritage.",
+    image:
+      "images/destinations/our-lady-of-the-immaculate-conception-parish-church/church1.png",
+    link: "destinations/major-&-historical-places/our-lady-of-the-immaculate-conception-parish-church.html",
+  },
+
+  {
+    name: "Philippine Eagle Landmark",
+    category: "landmarks",
+    description:
+      "An adventure destination known for outdoor activities and exciting attractions.",
+    image: "images/destinations/philippine-eagle-landmark/1.jpg",
+    link: "destinations/nature-&-adventure/eagle-landmark-guilang-guilang.html",
   },
 
   {
     name: "General Douglas MacArthur Landmark",
-    category: "history",
+    category: "landmarks",
     description:
       "A historical landmark commemorating General Douglas MacArthur.",
     image: "images/destinations/macarthur-landmark/1.jpg",
-    link: "destinations/macarthur-landmark.html",
+    link: "destinations/nature-&-landmarks/macarthur-landmark.html",
   },
 
   {
     name: "Mangima Heroes Shrine",
-    category: "history",
+    category: "landmarks",
     description:
       "A historical memorial honoring heroes and remembering the past.",
     image: "images/destinations/mangima-heroes-shrine/mangima1.png",
-    images: [
-      "images/destinations/mangima-heroes-shrine/mangima1.png",
-      "images/destinations/mangima-heroes-shrine/mangima2.png",
-      "images/destinations/mangima-heroes-shrine/mangima3.png",
-    ],
-    link: "destinations/mangima-heroes-shrine.html",
+    link: "destinations/nature-&-landmarks/mangima-heroes-shrine.html",
   },
 
   {
     name: "Manolo Fortich Bus Terminal",
-    category: "nature",
+    category: "key places",
     description:
       "A public transportation hub located in Tankulan, Manolo Fortich, Bukidnon. It serves commuters traveling to nearby municipalities and cities.",
     image: "images/destinations/manolo-terminal/terminal.png",
-    link: "destinations/manoloTerminal.html",
+    link: "destinations/major-&-historical-places/manolo Fortich-bus-terminal.html",
   },
 
   // --- LOCAL ATTRACTIONS (shown ONLY when "Local attractions" is clicked) ---
@@ -64,26 +165,17 @@ const destinations = [
     category: "local",
     description:
       "A relaxing farm-to-table riverside getaway featuring botanical gardens, cozy cabins, and peaceful nature trails.",
-    image: "images/destinations/kumaykay-river-farm/kumaykay1.png",
+    image: "images/destinations/kumaykay-river-farm/1.png",
     link: "destinations/kumaykay-river-farm.html",
   },
 
   {
-    name: "Alalum Falls",
-    category: "local",
+    name: "Nasiklapan Falls",
+    category: "nature",
     description:
       "A towering 148-foot waterfall easily visible along Sayre Highway, surrounded by lush forest greenery.",
-    image: "images/destinations/alalum-falls/alalum1.png",
-    link: "destinations/alalum-falls.html",
-  },
-
-  {
-    name: "Mangima Spring Resort",
-    category: "local",
-    description:
-      "A classic roadside mountain resort nestled in Mangima Canyon, famous for its cool natural spring pools.",
-    image: "images/destinations/mangima-spring-resort/resort1.png",
-    link: "destinations/mangima-spring-resort.html",
+    image: "images/destinations/nasiklapan-falls/1.png",
+    link: "destinations/nature-&-adventure/nasiklapan-falls.html",
   },
 
   {
@@ -92,7 +184,7 @@ const destinations = [
     description:
       "The lively town center of Manolo Fortich, featuring open lawns, evening food stalls, and community landmarks.",
     image: "images/destinations/manolo-fortich-municipal-plaza/plaza1.png",
-    link: "destinations/manolo-fortich-municipal-plaza.html",
+    link: "destinations/major-&-historical-places/manolo-fortich-municipal-plaza.html",
   },
 ];
 

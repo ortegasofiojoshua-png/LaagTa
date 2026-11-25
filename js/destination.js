@@ -47,7 +47,7 @@ const destinationData = {
     photos: ["1.jpg", "2.jpg", "3.jpg"],
   },
 
-  "del-monte": {
+  "del-monte-pineapple-plantation": {
     name: "Del Monte Pineapple Plantation and Monument",
     location: "Manolo Fortich, Bukidnon",
 
@@ -56,9 +56,9 @@ const destinationData = {
 
     search: "Del Monte Pineapple Plantation Monument, Manolo Fortich, Bukidnon",
 
-    folder: "del-monte",
+    folder: "del-monte-pineapple-plantation",
 
-    photos: ["1.jpg", "2.jpg", "3.jpg"],
+    photos: ["1.jpg", "2.jpg", "3.jpg", "4.webp", "5.avif"],
   },
 
   "macarthur-landmark": {

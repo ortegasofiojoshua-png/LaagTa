@@ -14,11 +14,12 @@ const destinations = [
     image: "images/destinations/kampojuan/1.jpg",
     link: "destinations/kampojuan-eco-adventure-farm.html",
   },
+
   {
     name: "Del Monte Pineapple Plantation and Monument",
     description:
       "A landmark associated with the area's well-known pineapple plantation and agricultural heritage.",
-    image: "images/destinations/del-monte/1.jpg",
+    image: "images/destinations/del-monte-pineapple-plantation/1.jpg",
     link: "destinations/del-monte-pineapple-plantation.html",
   },
 

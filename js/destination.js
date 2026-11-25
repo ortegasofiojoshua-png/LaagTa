@@ -33,6 +33,22 @@ const destinationData = {
     ],
   },
 
+  "cowboy's-camp": {
+    name: "Cowboy's Camp",
+    location: "Libona, Manolo Fortich, Bukidnon",
+
+    description:
+      "The Cowboy's Camp in Manolo Fortich, Bukidnon is a beautiful destination for those seeking a peaceful retreat in the highlands.",
+
+    search: "Cowboy's Camp, Manolo Fortich, Bukidnon",
+
+    folder: "cowboy's-camp",
+
+    coordinates: [8.20253, 124.85863],
+
+    photos: ["1.jpg", "2.jpg", "3.jpg"],
+  },
+
   kampojuan: {
     name: "KampoJuan Eco-Adventure Farm",
     location: "Manolo Fortich, Bukidnon",

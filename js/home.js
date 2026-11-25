@@ -8,12 +8,12 @@ const destinations = [
     link: "destinations/adventure/dahilayan-adventure-park.html",
   },
   {
-    name: "Communal Ranch",
+    name: "Cowboy's Camp",
     category: "adventure",
     description:
       "An adventure destination known for outdoor activities and exciting attractions.",
-    image: "images/destinations/communal-ranch/1.jpg",
-    link: "destinations/adventure/communal-ranch.html",
+    image: "images/destinations/cowboy's-camp/1.jpg",
+    link: "destinations/adventure/cowboy's-camp.html",
   },
   {
     name: "Del Monte Golf Course",

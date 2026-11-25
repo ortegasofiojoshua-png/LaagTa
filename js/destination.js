@@ -44,7 +44,7 @@ const destinationData = {
 
     folder: "cowboy's-camp",
 
-    coordinates: [8.20253, 124.85863],
+    coordinates: [8.3491, 124.7122],
 
     photos: ["1.jpg", "2.jpg", "3.jpg"],
   },

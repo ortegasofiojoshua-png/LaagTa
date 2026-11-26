@@ -28,7 +28,7 @@ const destinations = [
     category: "adventure",
     description:
       "An eco-adventure destination offering outdoor experiences and nature activities.",
-    image: "images/destinations/kampojuan/1.jpg",
+    image: "images/destinations/kampojuan-eco-adventure-farm/1.jpg",
     link: "destinations/adventure/kampojuan-eco-adventure-farm.html",
   },
 

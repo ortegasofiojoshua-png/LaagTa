@@ -65,18 +65,20 @@ const destinationData = {
     photos: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"],
   },
 
-  kampojuan: {
+  "kampojuan-eco-adventure-farm": {
     name: "KampoJuan Eco-Adventure Farm",
     location: "Manolo Fortich, Bukidnon",
 
     description:
-      "KampoJuan Eco-Adventure Farm is an eco-adventure destination that combines outdoor recreation with a natural farm environment. It offers visitors a place to enjoy activities and explore the outdoors.",
+      "Discover KampoJuan Eco Adventure Farm in Manolo Fortich, Bukidnon, where nature, adventure, and Filipino history come together. Enjoy exciting activities like Anicycle sky biking and ziplining, explore its lush surroundings, or visit the heritage house filled with antiques, artworks, and historical treasures. It's a perfect destination for adventure seekers, nature lovers, and anyone looking for a unique countryside experience.",
 
     search: "KampoJuan Eco Adventure Farm, Manolo Fortich, Bukidnon",
 
-    folder: "kampojuan",
+    folder: "kampojuan-eco-adventure-farm",
 
-    photos: ["1.jpg", "2.jpg", "3.jpg"],
+    coordinates: [8.3949, 124.8475],
+
+    photos: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"],
   },
 
   "del-monte-pineapple-plantation": {

@@ -11,7 +11,7 @@ const destinations = [
     name: "Cowboy's Camp",
     category: "adventure",
     description:
-      "An adventure destination known for outdoor activities and exciting attractions.",
+      "Enjoy a relaxing countryside getaway at Cowboy's Camp, where rustic cowboy vibes, scenic views, and outdoor fun come together!",
     image: "images/destinations/cowboy's-camp/1.jpg",
     link: "destinations/adventure/cowboy's-camp.html",
   },

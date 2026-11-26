@@ -38,7 +38,7 @@ const destinationData = {
     location: "Libona, Manolo Fortich, Bukidnon",
 
     description:
-      "The Cowboy's Camp in Manolo Fortich, Bukidnon is a beautiful destination for those seeking a peaceful retreat in the highlands.",
+      "Cowboy's Camp is a relaxing countryside destination in Libona, Bukidnon, where visitors can enjoy a peaceful outdoor experience surrounded by nature. With its rustic cowboy-inspired atmosphere and scenic surroundings, it's a great spot for sightseeing, taking photos, and spending quality time with family and friends.",
 
     search: "Cowboy's Camp, Manolo Fortich, Bukidnon",
 
@@ -46,7 +46,7 @@ const destinationData = {
 
     coordinates: [8.3491, 124.7122],
 
-    photos: ["1.jpg", "2.jpg", "3.jpg"],
+    photos: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"],
   },
 
   kampojuan: {

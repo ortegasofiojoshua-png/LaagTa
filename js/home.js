@@ -37,8 +37,17 @@ const destinations = [
     category: "adventure",
     description:
       "An adventure destination known for outdoor activities and exciting attractions.",
-    image: "images/destinations/kumaykay-river-farm/kumaykay1.png",
+    image: "images/destinations/kumaykay-river-farm/1.webp",
     link: "destinations/adventure/kumaykay-river-farm.html",
+  },
+
+  {
+    name: "Ogaong View Deck",
+    category: "adventure",
+    description:
+      "Take in the breathtaking views of Tagoloan River Canyon, Rolling Pigsuguan Hills, and Buklod Ridge at Ogaong View Deck in Manolo Fortich, Bukidnon.",
+    image: "images/destinations/ogaong-view-deck/1.jpg",
+    link: "destinations/adventure/ogaong-view-deck.html",
   },
 
   {

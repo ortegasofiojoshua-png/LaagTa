@@ -97,6 +97,22 @@ const destinationData = {
     photos: ["1.jpg", "2.jpg", "3.jpg", "4.webp", "5.avif"],
   },
 
+  "ogaong-view-deck": {
+    name: "Ogaong View Deck",
+    location: "Manolo Fortich, Bukidnon",
+
+    description:
+      "Ogaong View Deck in Manolo Fortich, Bukidnon, is a perfect spot to enjoy breathtaking views of Tagoloan River Canyon, Rolling Pigsuguan Hills, and Buklod Ridge. Surrounded by beautiful mountain landscapes and fresh countryside air, visitors can enjoy sightseeing, camping, and watching the stunning sea of clouds. It's an ideal destination for nature lovers and travelers looking for a peaceful escape and unforgettable views.",
+
+    search: "Ogaong View Deck, Manolo Fortich, Bukidnon",
+
+    folder: "ogaong-view-deck",
+
+    coordinates: [8.4398, 124.8776],
+
+    photos: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg"],
+  },
+
   "macarthur-landmark": {
     name: "General Douglas MacArthur Landmark",
     location: "Manolo Fortich, Bukidnon",
@@ -145,16 +161,18 @@ const destinationData = {
   // --- LOCAL ATTRACTIONS ---
   "kumaykay-river-farm": {
     name: "Kumaykay River Farm",
-    location: "Barangay Dalirig, Manolo Fortich, Bukidnon",
+    location: "Dahilayan, Manolo Fortich, Bukidnon",
 
     description:
-      "Kumaykay River Farm is a serene agri-tourism and nature retreat tucked along the banks of the Kumaykay River in Barangay Dalirig, Manolo Fortich, Bukidnon. Surrounded by vibrant gardens, towering trees, and cool mountain waters, it offers visitors a quiet escape from the city, fresh farm-to-table meals, and cozy riverside cottages.",
+      "Kumaykay River Farm is a serene agri-tourism and nature retreat tucked along the banks of the Kumaykay River in Barangay Dalirig, Manolo Fortich, Bukidnon. Surrounded by vibrant gardens, towering trees, and cool mountain waters, it offers visitors a quiet escape from the city, fresh farm-to-table meals, and cozy riverside cottages.Experience glamping, outdoor camping, river adventures, horseback riding, and delicious farm-style dining. It's the perfect place to relax, reconnect with nature, and create unforgettable memories with family and friends!",
 
     search: "Kumaykay River Farm, Dalirig, Manolo Fortich, Bukidnon",
 
+    coordinates: [8.22177, 124.8568],
+
     folder: "kumaykay-river-farm",
 
-    photos: ["kumaykay1.png"],
+    photos: ["1.webp", "2.webp", "3.jpg", "4.jpg", "5.webp", "6.webp"],
   },
 
   "alalum-falls": {

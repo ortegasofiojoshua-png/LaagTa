@@ -31,7 +31,6 @@ const destinations = [
     image: "images/destinations/kampojuan/1.jpg",
     link: "destinations/adventure/kampojuan-eco-adventure-farm.html",
   },
-
   {
     name: "Kumaykay River Farm",
     category: "adventure",
@@ -40,7 +39,6 @@ const destinations = [
     image: "images/destinations/kumaykay-river-farm/kumaykay1.png",
     link: "destinations/adventure/kumaykay-river-farm.html",
   },
-
   {
     name: "View deck Maluko",
     category: "adventure",
@@ -49,7 +47,6 @@ const destinations = [
     image: "images/destinations/view-deck-maluko/view1.png",
     link: "destinations/adventure/view-deck-maluko.html",
   },
-
   {
     name: "Del Monte Pineapple Plantation and Monument",
     category: "key places",
@@ -58,7 +55,6 @@ const destinations = [
     image: "images/destinations/del-monte-pineapple-plantation/1.jpg",
     link: "destinations/major-&-historical-places/del-monte-pineapple-plantation.html",
   },
-
   {
     name: "Bukidnon Provincial Hospital",
     category: "key places",
@@ -76,7 +72,6 @@ const destinations = [
       "images/destinations/our-lady-of-perpetual-help-parish-church/church1.png",
     link: "destinations/major-&-historical-places/our-lady-of-perpetual-help-parish-church.html",
   },
-
   {
     name: "Del Monte Airstrip",
     category: "historical places",
@@ -85,34 +80,30 @@ const destinations = [
     image: "images/destinations/del-monte-airstrip/airstrip1.png",
     link: "destinations/major-&-historical-places/del-monte-airstrip.html",
   },
-
   {
     name: "Del Monte Soccer Field",
     category: "key places",
     description:
       "A historical landmark associated with the area's sports and recreation facilities.",
-    image: "images/destinations/del-monte-soccer-field/1.jpg",
+    image: "images/destinations/del-monte-soccer-field/soccer.png",
     link: "destinations/major-&-historical-places/del-monte-soccer-field.html",
   },
-
   {
     name: "Manolo Fortich Municipal Hall",
     category: "key places",
     description:
       "A historical landmark associated with the area's civic heritage.",
-    image: "images/destinations/manolo Fortich-municipal-hall/hall1.png",
-    link: "destinations/major-&-historical-places/manolo Fortich-municipal-hall.html",
+    image: "images/destinations/manolo-fortich-municipal-hall/municipal.png",
+    link: "destinations/major-&-historical-places/manolo-fortich-municipal-hall.html",
   },
-
   {
     name: "Manolo Fortich Municipal Plaza",
     category: "key places",
     description:
       "A historical landmark associated with the area's civic heritage.",
-    image: "images/destinations/manolo Fortich-municipal-plaza/plaza1.png",
-    link: "destinations/major-&-historical-places/manolo Fortich-municipal-plaza.html",
+    image: "images/destinations/manolo-fortich-municipal-plaza/plaza1.png",
+    link: "destinations/major-&-historical-places/manolo-fortich-municipal-plaza.html",
   },
-
   {
     name: "Our Lady of the Immaculate Conception Parish Church",
     category: "historical places",
@@ -122,16 +113,14 @@ const destinations = [
       "images/destinations/our-lady-of-the-immaculate-conception-parish-church/church1.png",
     link: "destinations/major-&-historical-places/our-lady-of-the-immaculate-conception-parish-church.html",
   },
-
   {
     name: "Philippine Eagle Landmark",
     category: "landmarks",
     description:
-      "An adventure destination known for outdoor activities and exciting attractions.",
-    image: "images/destinations/philippine-eagle-landmark/1.jpg",
-    link: "destinations/nature-&-adventure/eagle-landmark-guilang-guilang.html",
+      "A scenic landmark in Barangay Guilang-Guilang offering sweeping highland views.",
+    image: "images/destinations/eagle-landmark-guilang-guilang/1.avif",
+    link: "destinations/nature-&-landmarks/eagle-landmark-guilang-guilang.html",
   },
-
   {
     name: "General Douglas MacArthur Landmark",
     category: "landmarks",
@@ -140,7 +129,6 @@ const destinations = [
     image: "images/destinations/macarthur-landmark/1.jpg",
     link: "destinations/nature-&-landmarks/macarthur-landmark.html",
   },
-
   {
     name: "Mangima Heroes Shrine",
     category: "landmarks",
@@ -149,14 +137,29 @@ const destinations = [
     image: "images/destinations/mangima-heroes-shrine/mangima1.png",
     link: "destinations/nature-&-landmarks/mangima-heroes-shrine.html",
   },
-
   {
     name: "Manolo Fortich Bus Terminal",
     category: "key places",
     description:
       "A public transportation hub located in Tankulan, Manolo Fortich, Bukidnon. It serves commuters traveling to nearby municipalities and cities.",
     image: "images/destinations/manolo-terminal/terminal.png",
-    link: "destinations/major-&-historical-places/manolo Fortich-bus-terminal.html",
+    link: "destinations/major-&-historical-places/manoloTerminal.html",
+  },
+  {
+    name: "Nasiklapan Falls",
+    category: "nature",
+    description:
+      "A scenic waterfall surrounded by lush greenery and cool highland air in Manolo Fortich, Bukidnon.",
+    image: "images/destinations/nasiklapan-falls/1.avif",
+    link: "destinations/nature-&-landmarks/nasiklapan-falls.html",
+  },
+  {
+    name: "Sumalsag Cave",
+    category: "nature",
+    description:
+      "A natural cave formation set amid scenic highland terrain in Manolo Fortich, Bukidnon.",
+    image: "images/destinations/sumalsag-cave/1.avif",
+    link: "destinations/nature-&-landmarks/sumalsag-cave.html",
   },
 
   // --- LOCAL ATTRACTIONS (shown ONLY when "Local attractions" is clicked) ---
@@ -165,19 +168,9 @@ const destinations = [
     category: "local",
     description:
       "A relaxing farm-to-table riverside getaway featuring botanical gardens, cozy cabins, and peaceful nature trails.",
-    image: "images/destinations/kumaykay-river-farm/1.png",
+    image: "images/destinations/kumaykay-river-farm/kumaykay1.png",
     link: "destinations/kumaykay-river-farm.html",
   },
-
-  {
-    name: "Nasiklapan Falls",
-    category: "nature",
-    description:
-      "A towering 148-foot waterfall easily visible along Sayre Highway, surrounded by lush forest greenery.",
-    image: "images/destinations/nasiklapan-falls/1.png",
-    link: "destinations/nature-&-adventure/nasiklapan-falls.html",
-  },
-
   {
     name: "Manolo Fortich Municipal Plaza",
     category: "local",
@@ -197,7 +190,7 @@ function mapLabelToCategory(labelText) {
   if (text.includes("all")) return "all";
   if (text.includes("nature")) return "nature";
   if (text.includes("adventure")) return "adventure";
-  if (text.includes("histor")) return "history";
+  if (text.includes("histor")) return "historical places";
   return null;
 }
 
@@ -211,12 +204,10 @@ function getFilteredDestinations(category = activeCategory, searchValue = "") {
 
     if (!matchesSearch) return false;
 
-    // Show ONLY local attractions when "Local attractions" is active
     if (category === "local") {
       return destination.category === "local";
     }
 
-    // Never show "local" items in "all" or other categories
     if (category === "all") {
       return destination.category !== "local";
     }
@@ -242,6 +233,28 @@ function displayDestinations(list) {
     image.src = destination.image;
     image.alt = destination.name;
     image.width = 250;
+
+    const dotIndex = destination.image.lastIndexOf(".");
+    const basePath =
+      dotIndex > -1 ? destination.image.slice(0, dotIndex) : destination.image;
+    const candidates = [
+      `${basePath}.jpg`,
+      `${basePath}.png`,
+      `${basePath}.avif`,
+      `${basePath}.webp`,
+    ];
+    let fallbackIndex = 0;
+
+    image.onerror = function () {
+      while (fallbackIndex < candidates.length) {
+        const nextSrc = candidates[fallbackIndex++];
+        if (nextSrc !== image.getAttribute("src")) {
+          image.src = nextSrc;
+          return;
+        }
+      }
+      image.onerror = null;
+    };
 
     const title = document.createElement("h3");
     title.textContent = destination.name;
@@ -288,7 +301,6 @@ function selectCategory(category) {
   applyFilters();
 }
 
-// Sidebar category links (.side-link)
 document.querySelectorAll(".side-link").forEach((link) => {
   const mappedCategory = mapLabelToCategory(link.textContent);
   if (mappedCategory) {
@@ -298,7 +310,6 @@ document.querySelectorAll(".side-link").forEach((link) => {
   }
 });
 
-// Toolbar filter pills (.filter-pill)
 document.querySelectorAll(".filter-pill").forEach((pill) => {
   const mappedCategory = mapLabelToCategory(pill.textContent);
   if (mappedCategory) {
@@ -319,6 +330,5 @@ if (searchInput) {
   searchInput.addEventListener("keyup", applyFilters);
 }
 
-// Initial render: shows non-local destinations; clicking "Local attractions" shows only "local"
 updateActiveStates(activeCategory);
 applyFilters();

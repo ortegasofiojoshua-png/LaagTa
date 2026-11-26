@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LaagTa | Our Lady of the Immaculate Conception Parish</title>
+
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+  </head>
+
+  <body
+    class="destination-page"
+    data-destination="our-lady-of-the-immaculate-conception-parish"
+  >
+    <header class="topbar">
+      <a class="brand" href="../../index.html" aria-label="LaagTa homepage">
+        <img src="../../images/logo.png" alt="LaagTa logo" />
+        <span>Laag<span class="brand-accent">Ta</span></span>
+      </a>
+
+      <nav class="destination-nav" aria-label="Main navigation">
+        <a href="../../index.html">Home</a>
+        <a href="#about">About</a>
+        <a href="#photos">Gallery</a>
+        <a href="#location">Location</a>
+      </nav>
+
+      <a class="nav-cta" href="#location">Find Location <span>↗</span></a>
+    </header>
+
+    <main class="destination-main">
+      <section
+        class="destination-hero"
+        aria-label="Our Lady of the Immaculate Conception Parish"
+      >
+        <img
+          id="destinationPhoto"
+          src="../../images/destinations/our-lady-of-the-immaculate-conception-parish/1.avif"
+          alt="Our Lady of the Immaculate Conception Parish"
+        />
+        <div class="destination-hero-shade"></div>
+
+        <div class="hero-inner">
+          <div class="breadcrumb">
+            <a href="../../index.html">Home</a>
+            <span>/</span>
+            <span>Destinations</span>
+            <span>/</span>
+            <span>Our Lady of the Immaculate Conception Parish</span>
+          </div>
+
+          <div class="hero-copy">
+            <span class="hero-kicker">HERITAGE &amp; FAITH</span>
+            <h1 id="destinationName">
+              Our Lady of the Immaculate Conception Parish
+            </h1>
+            <p class="hero-location">
+              <span aria-hidden="true">⌖</span>
+              <span id="destinationLocation"
+                >Poblacion, Manolo Fortich, Bukidnon</span
+              >
+            </p>
+            <p class="hero-description">
+              A peaceful parish landmark in Manolo Fortich welcoming visitors in
+              the cool highlands of Bukidnon.
+            </p>
+            <a class="hero-button" href="#about"
+              >Discover the destination <span>↓</span></a
+            >
+          </div>
+
+          <div
+            class="hero-photo-controls"
+            aria-label="Photo slideshow controls"
+          >
+            <button
+              id="previousPhoto"
+              type="button"
+              aria-label="Previous photo"
+            >
+              ‹
+            </button>
+            <span id="photoCounter">1 / 7</span>
+            <button id="nextPhoto" type="button" aria-label="Next photo">
+              ›
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <div class="destination-content">
+        <section class="intro-section" id="about">
+          <div class="intro-copy">
+            <span class="section-kicker">LOCAL LANDMARK</span>
+            <h2>
+              Visit <span>Our Lady of the Immaculate Conception Parish</span>
+            </h2>
+            <p id="destinationDescription">
+              Our Lady of the Immaculate Conception Parish is a prominent church
+              and community landmark located in Manolo Fortich, Bukidnon.
+            </p>
+            <div class="destination-facts">
+              <div class="fact-item">
+                <span class="fact-icon">⌖</span>
+                <div>
+                  <small>LOCATION</small>
+                  <strong>Manolo Fortich, Bukidnon</strong>
+                </div>
+              </div>
+              <div class="fact-item">
+                <span class="fact-icon">⌁</span>
+                <div>
+                  <small>SETTING</small>
+                  <strong>Parish &amp; town center</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="intro-image">
+            <img
+              src="../../images/destinations/our-lady-of-the-immaculate-conception-parish/adventure.jpg"
+              alt="Our Lady of the Immaculate Conception Parish grounds"
+            />
+            <span class="image-caption"
+              >A quiet, historic landmark in Manolo Fortich</span
+            >
+          </div>
+        </section>
+
+        <section class="location-section" id="location">
+          <div class="section-heading">
+            <div>
+              <span class="section-kicker">FIND YOUR WAY</span>
+              <h2>Explore the location</h2>
+            </div>
+            <p>View the destination on the map and check your route.</p>
+          </div>
+
+          <div class="map-panel">
+            <div id="map"></div>
+            <div class="map-actions">
+              <p id="locationStatus">Finding destination location...</p>
+              <div class="map-buttons">
+                <button id="showMyLocationBtn" type="button">
+                  ◎ Find my location
+                </button>
+                <button id="clearRouteBtn" type="button">Clear route</button>
+              </div>
+              <div id="routeInformation"></div>
+            </div>
+          </div>
+
+          <div class="weather-panel" id="weatherPanel" hidden>
+            <div class="weather-heading">
+              <div>
+                <span class="section-kicker">WEATHER UPDATE</span>
+                <h2>Weather Along Your Route</h2>
+                <p>Check the weather before starting your trip.</p>
+              </div>
+              <span class="weather-symbol">☀</span>
+            </div>
+            <p id="weatherStatus" class="weather-status">
+              Weather information will appear after activating GPS.
+            </p>
+            <div id="weatherCards" class="weather-grid"></div>
+            <div class="weather-footer">
+              Weather forecast provided by
+              <a
+                href="https://open-meteo.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Open-Meteo</a
+              >
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="destination-footer">
+      <a class="footer-brand" href="../../index.html">Laag<span>Ta</span></a>
+      <p>Discover places. Create memories. Explore Manolo Fortich.</p>
+      <a href="../../index.html">Back to homepage ↑</a>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../../js/destination.js"></script>
+  </body>
+</html>

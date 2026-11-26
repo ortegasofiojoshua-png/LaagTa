@@ -63,6 +63,38 @@ const destinationData = {
     photos: ["1.jpg", "2.jpg", "3.jpg", "4.webp", "5.avif"],
   },
 
+  "del-monte-soccer-field": {
+    name: "Del Monte Soccer Field",
+    location: "Camp Phillips, Manolo Fortich, Bukidnon",
+    description:
+      "Del Monte Soccer Field is a well-known sports and recreational field set amid open green spaces and cool highland air in Manolo Fortich, Bukidnon.",
+    search: "Del Monte Soccer Field, Manolo Fortich, Bukidnon",
+    coordinates: [8.3225244, 124.8124888],
+    folder: "del-monte-soccer-field",
+    photos: ["soccer.png", "soccer1.png", "soccer2.png", "soccer3.png"],
+  },
+
+  "manolo-fortich-municipal-hall": {
+    name: "Manolo Fortich Municipal Hall",
+    location: "Tankulan (Poblacion), Manolo Fortich, Bukidnon",
+
+    description:
+      "Manolo Fortich Municipal Hall serves as the center of local governance and civic landmarks in Manolo Fortich, Bukidnon.",
+
+    search: "Manolo Fortich Municipal Hall, Manolo Fortich, Bukidnon",
+
+    coordinates: [8.3688, 124.8648],
+
+    folder: "manolo-fortich-municipal-hall",
+
+    photos: [
+      "municipal.png",
+      "municipal1.png",
+      "municipal2.png",
+      "municipal3.png",
+    ],
+  },
+
   "macarthur-landmark": {
     name: "General Douglas MacArthur Landmark",
     location: "Manolo Fortich, Bukidnon",
@@ -89,6 +121,78 @@ const destinationData = {
     folder: "mangima-heroes-shrine",
 
     photos: ["mangima1.png", "mangima2.png", "mangima3.png"],
+  },
+
+  "eagle-landmark-guilang-guilang": {
+    name: "Eagle Landmark Guilang-Guilang",
+    location: "Guilang-Guilang, Manolo Fortich, Bukidnon",
+
+    description:
+      "Eagle Landmark in Barangay Guilang-Guilang offers panoramic highland views and a memorable landmark stop in Manolo Fortich, Bukidnon.",
+
+    search: "Eagle Landmark Guilang-Guilang, Manolo Fortich, Bukidnon",
+
+    coordinates: [8.3289, 124.9183],
+
+    folder: "eagle-landmark-guilang-guilang",
+
+    photos: [
+      "1.avif",
+      "2.avif",
+      "3.avif",
+      "4.avif",
+      "5.avif",
+      "6.avif",
+      "7.avif",
+    ],
+  },
+
+  "nasiklapan-falls": {
+    name: "Nasiklapan Falls",
+    location: "Manolo Fortich, Bukidnon",
+
+    description:
+      "Nasiklapan Falls is a scenic waterfall destination surrounded by lush greenery and cool highland air in Manolo Fortich, Bukidnon.",
+
+    search: "Nasiklapan Falls, Manolo Fortich, Bukidnon",
+
+    coordinates: [8.3515, 124.8924],
+
+    folder: "nasiklapan-falls",
+
+    photos: [
+      "1.avif",
+      "2.avif",
+      "3.avif",
+      "4.avif",
+      "5.avif",
+      "6.avif",
+      "7.avif",
+    ],
+  },
+
+  "sumalsag-cave": {
+    name: "Sumalsag Cave",
+    location: "Manolo Fortich, Bukidnon",
+
+    description:
+      "Sumalsag Cave is a natural cave formation set amid scenic highland terrain in Manolo Fortich, Bukidnon.",
+
+    search: "Sumalsag Cave, Manolo Fortich, Bukidnon",
+
+    coordinates: [8.3482, 124.8879],
+
+    folder: "sumalsag-cave",
+
+    photos: [
+      "1.avif",
+      "2.avif",
+      "3.avif",
+      "4.avif",
+      "5.avif",
+      "6.avif",
+      "7.avif",
+    ],
   },
 
   "manolo-terminal": {
@@ -230,13 +334,30 @@ function displayDestination() {
 // 5. IMAGE SLIDESHOW
 // ==========================================
 
+function getImageRootPrefix() {
+  return window.location.pathname.includes("nature-&-landmarks")
+    ? "../../../"
+    : "../../";
+}
+
 function showPhoto() {
-  const photo = currentDestination.photos[currentPhotoIndex];
+  const photos = currentDestination.photos || [];
+  if (photos.length === 0) return;
 
+  const photo = photos[currentPhotoIndex];
   const destinationImage = document.getElementById("destinationPhoto");
+  const counterEl = document.getElementById("photoCounter");
 
+  if (counterEl) {
+    counterEl.textContent = currentPhotoIndex + 1 + " / " + photos.length;
+  }
+
+  if (!destinationImage) return;
+
+  const root = getImageRootPrefix();
   const imagePath =
-    "../../images/destinations/" + currentDestination.folder + "/" + photo;
+    root + "images/destinations/" + currentDestination.folder + "/" + photo;
+  const fallbackPath = root + "images/logo.png";
 
   destinationImage.alt =
     currentDestination.name + " photo " + (currentPhotoIndex + 1);
@@ -255,12 +376,12 @@ function showPhoto() {
 
   newImage.onerror = function () {
     console.error("Unable to load image:", imagePath);
+    if (destinationImage.getAttribute("src") !== fallbackPath) {
+      destinationImage.src = fallbackPath;
+    }
   };
 
   newImage.src = imagePath;
-
-  document.getElementById("photoCounter").textContent =
-    currentPhotoIndex + 1 + " / " + currentDestination.photos.length;
 }
 
 function nextPhoto() {

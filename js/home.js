@@ -19,8 +19,8 @@ const destinations = [
     name: "Del Monte Golf Course",
     category: "adventure",
     description:
-      "An adventure destination known for outdoor activities and exciting attractions.",
-    image: "images/destinations/del-monte-golf-course/1.jpg",
+      "Enjoy a relaxing golf experience at Del Monte Golf Club in Manolo Fortich, Bukidnon, featuring an 18-hole course, beautiful green fairways, pine trees, and scenic lakes surrounded by the cool highland atmosphere.",
+    image: "images/destinations/del-monte-golf-course/3.jpg",
     link: "destinations/adventure/del-monte-golf-course.html",
   },
   {

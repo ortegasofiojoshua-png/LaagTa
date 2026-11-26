@@ -49,6 +49,22 @@ const destinationData = {
     photos: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"],
   },
 
+  "del-monte-golf-course": {
+    name: "Del Monte Golf Course",
+    location: "San Miguel, Manolo Fortich, Bukidnon",
+
+    description:
+      "Experience a relaxing day at Del Monte Golf Club in Manolo Fortich, Bukidnon, home to a beautiful 18-hole golf course surrounded by lush greenery, tall pine trees, and scenic landscapes. Enjoy the cool mountain breeze while playing golf across its well-maintained fairways and peaceful surroundings. Whether you're an experienced golfer or simply looking for a quiet place to unwind, Del Monte Golf Club offers a refreshing escape and a unique outdoor experience.",
+
+    search: "Del Monte Golf Course, Manolo Fortich, Bukidnon",
+
+    folder: "del-monte-golf-course",
+
+    coordinates: [8.3778, 124.8372],
+
+    photos: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"],
+  },
+
   kampojuan: {
     name: "KampoJuan Eco-Adventure Farm",
     location: "Manolo Fortich, Bukidnon",

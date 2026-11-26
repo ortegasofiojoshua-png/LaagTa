@@ -33,18 +33,52 @@ const destinationData = {
     ],
   },
 
-  kampojuan: {
+  "cowboy's-camp": {
+    name: "Cowboy's Camp",
+    location: "Libona, Manolo Fortich, Bukidnon",
+
+    description:
+      "Cowboy's Camp is a relaxing countryside destination in Libona, Bukidnon, where visitors can enjoy a peaceful outdoor experience surrounded by nature. With its rustic cowboy-inspired atmosphere and scenic surroundings, it's a great spot for sightseeing, taking photos, and spending quality time with family and friends.",
+
+    search: "Cowboy's Camp, Manolo Fortich, Bukidnon",
+
+    folder: "cowboy's-camp",
+
+    coordinates: [8.3491, 124.7122],
+
+    photos: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"],
+  },
+
+  "del-monte-golf-course": {
+    name: "Del Monte Golf Course",
+    location: "San Miguel, Manolo Fortich, Bukidnon",
+
+    description:
+      "Experience a relaxing day at Del Monte Golf Club in Manolo Fortich, Bukidnon, home to a beautiful 18-hole golf course surrounded by lush greenery, tall pine trees, and scenic landscapes. Enjoy the cool mountain breeze while playing golf across its well-maintained fairways and peaceful surroundings. Whether you're an experienced golfer or simply looking for a quiet place to unwind, Del Monte Golf Club offers a refreshing escape and a unique outdoor experience.",
+
+    search: "Del Monte Golf Course, Manolo Fortich, Bukidnon",
+
+    folder: "del-monte-golf-course",
+
+    coordinates: [8.3778, 124.8372],
+
+    photos: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"],
+  },
+
+  "kampojuan-eco-adventure-farm": {
     name: "KampoJuan Eco-Adventure Farm",
     location: "Manolo Fortich, Bukidnon",
 
     description:
-      "KampoJuan Eco-Adventure Farm is an eco-adventure destination that combines outdoor recreation with a natural farm environment. It offers visitors a place to enjoy activities and explore the outdoors.",
+      "Discover KampoJuan Eco Adventure Farm in Manolo Fortich, Bukidnon, where nature, adventure, and Filipino history come together. Enjoy exciting activities like Anicycle sky biking and ziplining, explore its lush surroundings, or visit the heritage house filled with antiques, artworks, and historical treasures. It's a perfect destination for adventure seekers, nature lovers, and anyone looking for a unique countryside experience.",
 
     search: "KampoJuan Eco Adventure Farm, Manolo Fortich, Bukidnon",
 
-    folder: "kampojuan",
+    folder: "kampojuan-eco-adventure-farm",
 
-    photos: ["1.jpg", "2.jpg", "3.jpg"],
+    coordinates: [8.3949, 124.8475],
+
+    photos: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"],
   },
 
   "del-monte-pineapple-plantation": {
@@ -63,6 +97,7 @@ const destinationData = {
     photos: ["1.jpg", "2.jpg", "3.jpg", "4.webp", "5.avif"],
   },
 
+<<<<<<< HEAD
   "del-monte-soccer-field": {
     name: "Del Monte Soccer Field",
     location: "Camp Phillips, Manolo Fortich, Bukidnon",
@@ -93,6 +128,22 @@ const destinationData = {
       "municipal2.png",
       "municipal3.png",
     ],
+=======
+  "ogaong-view-deck": {
+    name: "Ogaong View Deck",
+    location: "Manolo Fortich, Bukidnon",
+
+    description:
+      "Ogaong View Deck in Manolo Fortich, Bukidnon, is a perfect spot to enjoy breathtaking views of Tagoloan River Canyon, Rolling Pigsuguan Hills, and Buklod Ridge. Surrounded by beautiful mountain landscapes and fresh countryside air, visitors can enjoy sightseeing, camping, and watching the stunning sea of clouds. It's an ideal destination for nature lovers and travelers looking for a peaceful escape and unforgettable views.",
+
+    search: "Ogaong View Deck, Manolo Fortich, Bukidnon",
+
+    folder: "ogaong-view-deck",
+
+    coordinates: [8.4398, 124.8776],
+
+    photos: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg"],
+>>>>>>> 3ec5097d2a8ed452b1169636f48b1f77e78cf188
   },
 
   "macarthur-landmark": {
@@ -215,16 +266,18 @@ const destinationData = {
   // --- LOCAL ATTRACTIONS ---
   "kumaykay-river-farm": {
     name: "Kumaykay River Farm",
-    location: "Barangay Dalirig, Manolo Fortich, Bukidnon",
+    location: "Dahilayan, Manolo Fortich, Bukidnon",
 
     description:
-      "Kumaykay River Farm is a serene agri-tourism and nature retreat tucked along the banks of the Kumaykay River in Barangay Dalirig, Manolo Fortich, Bukidnon. Surrounded by vibrant gardens, towering trees, and cool mountain waters, it offers visitors a quiet escape from the city, fresh farm-to-table meals, and cozy riverside cottages.",
+      "Kumaykay River Farm is a serene agri-tourism and nature retreat tucked along the banks of the Kumaykay River in Barangay Dalirig, Manolo Fortich, Bukidnon. Surrounded by vibrant gardens, towering trees, and cool mountain waters, it offers visitors a quiet escape from the city, fresh farm-to-table meals, and cozy riverside cottages.Experience glamping, outdoor camping, river adventures, horseback riding, and delicious farm-style dining. It's the perfect place to relax, reconnect with nature, and create unforgettable memories with family and friends!",
 
     search: "Kumaykay River Farm, Dalirig, Manolo Fortich, Bukidnon",
 
+    coordinates: [8.22177, 124.8568],
+
     folder: "kumaykay-river-farm",
 
-    photos: ["kumaykay1.png"],
+    photos: ["1.webp", "2.webp", "3.jpg", "4.jpg", "5.webp", "6.webp"],
   },
 
   "alalum-falls": {

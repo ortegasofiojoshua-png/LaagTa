@@ -8,19 +8,19 @@ const destinations = [
     link: "destinations/adventure/dahilayan-adventure-park.html",
   },
   {
-    name: "Communal Ranch",
+    name: "Cowboy's Camp",
     category: "adventure",
     description:
-      "An adventure destination known for outdoor activities and exciting attractions.",
-    image: "images/destinations/communal-ranch/1.jpg",
-    link: "destinations/adventure/communal-ranch.html",
+      "Enjoy a relaxing countryside getaway at Cowboy's Camp, where rustic cowboy vibes, scenic views, and outdoor fun come together!",
+    image: "images/destinations/cowboy's-camp/1.jpg",
+    link: "destinations/adventure/cowboy's-camp.html",
   },
   {
     name: "Del Monte Golf Course",
     category: "adventure",
     description:
-      "An adventure destination known for outdoor activities and exciting attractions.",
-    image: "images/destinations/del-monte-golf-course/1.jpg",
+      "Enjoy a relaxing golf experience at Del Monte Golf Club in Manolo Fortich, Bukidnon, featuring an 18-hole course, beautiful green fairways, pine trees, and scenic lakes surrounded by the cool highland atmosphere.",
+    image: "images/destinations/del-monte-golf-course/3.jpg",
     link: "destinations/adventure/del-monte-golf-course.html",
   },
   {
@@ -28,7 +28,7 @@ const destinations = [
     category: "adventure",
     description:
       "An eco-adventure destination offering outdoor experiences and nature activities.",
-    image: "images/destinations/kampojuan/1.jpg",
+    image: "images/destinations/kampojuan-eco-adventure-farm/1.jpg",
     link: "destinations/adventure/kampojuan-eco-adventure-farm.html",
   },
   {
@@ -36,9 +36,18 @@ const destinations = [
     category: "adventure",
     description:
       "An adventure destination known for outdoor activities and exciting attractions.",
-    image: "images/destinations/kumaykay-river-farm/kumaykay1.png",
+    image: "images/destinations/kumaykay-river-farm/1.webp",
     link: "destinations/adventure/kumaykay-river-farm.html",
   },
+  {
+    name: "Ogaong View Deck",
+    category: "adventure",
+    description:
+      "Take in the breathtaking views of Tagoloan River Canyon, Rolling Pigsuguan Hills, and Buklod Ridge at Ogaong View Deck in Manolo Fortich, Bukidnon.",
+    image: "images/destinations/ogaong-view-deck/1.jpg",
+    link: "destinations/adventure/ogaong-view-deck.html",
+  },
+
   {
     name: "View deck Maluko",
     category: "adventure",

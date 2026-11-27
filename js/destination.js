@@ -97,15 +97,19 @@ const destinationData = {
     photos: ["1.jpg", "2.jpg", "3.jpg", "4.webp", "5.avif"],
   },
 
-<<<<<<< HEAD
   "del-monte-soccer-field": {
     name: "Del Monte Soccer Field",
     location: "Camp Phillips, Manolo Fortich, Bukidnon",
+
     description:
       "Del Monte Soccer Field is a well-known sports and recreational field set amid open green spaces and cool highland air in Manolo Fortich, Bukidnon.",
+
     search: "Del Monte Soccer Field, Manolo Fortich, Bukidnon",
+
     coordinates: [8.3225244, 124.8124888],
+
     folder: "del-monte-soccer-field",
+
     photos: ["soccer.png", "soccer1.png", "soccer2.png", "soccer3.png"],
   },
 
@@ -122,13 +126,9 @@ const destinationData = {
 
     folder: "manolo-fortich-municipal-hall",
 
-    photos: [
-      "municipal.png",
-      "municipal1.png",
-      "municipal2.png",
-      "municipal3.png",
-    ],
-=======
+    photos: ["municipal.png"],
+  },
+
   "ogaong-view-deck": {
     name: "Ogaong View Deck",
     location: "Manolo Fortich, Bukidnon",
@@ -143,7 +143,6 @@ const destinationData = {
     coordinates: [8.4398, 124.8776],
 
     photos: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg"],
->>>>>>> 3ec5097d2a8ed452b1169636f48b1f77e78cf188
   },
 
   "macarthur-landmark": {
@@ -157,7 +156,12 @@ const destinationData = {
 
     folder: "macarthur-landmark",
 
-    photos: ["1.jpg", "2.jpg", "3.jpg"],
+    photos: [
+      "macarthur.png",
+      "macarthur1.png",
+      "macarthur2.png",
+      "macarthur3.png",
+    ],
   },
 
   "mangima-heroes-shrine": {
@@ -185,16 +189,12 @@ const destinationData = {
 
     coordinates: [8.3289, 124.9183],
 
-    folder: "eagle-landmark-guilang-guilang",
+    folder: "eagle-landmark",
 
     photos: [
-      "1.avif",
-      "2.avif",
-      "3.avif",
-      "4.avif",
-      "5.avif",
-      "6.avif",
-      "7.avif",
+      "eagle-landmark.png",
+      "eagle-landmark1.png",
+      "eagle-landmark2.png",
     ],
   },
 
@@ -211,15 +211,7 @@ const destinationData = {
 
     folder: "nasiklapan-falls",
 
-    photos: [
-      "1.avif",
-      "2.avif",
-      "3.avif",
-      "4.avif",
-      "5.avif",
-      "6.avif",
-      "7.avif",
-    ],
+    photos: ["falls.png", "falls1.png"],
   },
 
   "sumalsag-cave": {
@@ -235,15 +227,7 @@ const destinationData = {
 
     folder: "sumalsag-cave",
 
-    photos: [
-      "1.avif",
-      "2.avif",
-      "3.avif",
-      "4.avif",
-      "5.avif",
-      "6.avif",
-      "7.avif",
-    ],
+    photos: ["cave.png", "cave1.png", "cave2.png", "cave3.png"],
   },
 
   "manolo-terminal": {
@@ -261,6 +245,23 @@ const destinationData = {
     folder: "manolo-terminal",
 
     photos: ["terminal.png"],
+  },
+
+  "our-lady-of-the-immaculate-conception-parish": {
+    name: "Our Lady of the Immaculate Conception Parish",
+    location: "Poblacion, Manolo Fortich, Bukidnon",
+
+    description:
+      "Our Lady of the Immaculate Conception Parish is a prominent church and community landmark located in Manolo Fortich, Bukidnon.",
+
+    search:
+      "Our Lady of the Immaculate Conception Parish, Manolo Fortich, Bukidnon",
+
+    coordinates: [8.3686, 124.8639],
+
+    folder: "immaculate-conception-church",
+
+    photos: ["church.png", "church1.png", "church2.png", "church3.png"],
   },
 
   // --- LOCAL ATTRACTIONS ---
@@ -318,9 +319,11 @@ const destinationData = {
     search:
       "Manolo Fortich Municipal Plaza, Tankulan, Manolo Fortich, Bukidnon",
 
-    folder: "manolo-fortich-municipal-plaza",
+    coordinates: [8.3682, 124.8645],
 
-    photos: ["plaza1.png"],
+    folder: "manolo-municipal-plaza",
+
+    photos: ["plaza.png", "plaza0.png", "plaza1.png", "plaza2.png"],
   },
 };
 

@@ -105,37 +105,40 @@ const destinations = [
     image: "images/destinations/manolo-fortich-municipal-hall/municipal.png",
     link: "destinations/major-&-historical-places/manolo-fortich-municipal-hall.html",
   },
+
   {
     name: "Manolo Fortich Municipal Plaza",
     category: "key places",
     description:
       "A historical landmark associated with the area's civic heritage.",
-    image: "images/destinations/manolo-fortich-municipal-plaza/plaza1.png",
+    image: "images/destinations/manolo-municipal-plaza/plaza.png",
     link: "destinations/major-&-historical-places/manolo-fortich-municipal-plaza.html",
   },
+
   {
     name: "Our Lady of the Immaculate Conception Parish Church",
     category: "historical places",
     description:
       "A historical landmark associated with the area's religious heritage.",
-    image:
-      "images/destinations/our-lady-of-the-immaculate-conception-parish-church/church1.png",
+    image: "images/destinations/immaculate-conception-church/church.png",
     link: "destinations/major-&-historical-places/our-lady-of-the-immaculate-conception-parish-church.html",
   },
+
   {
     name: "Philippine Eagle Landmark",
     category: "landmarks",
     description:
       "A scenic landmark in Barangay Guilang-Guilang offering sweeping highland views.",
-    image: "images/destinations/eagle-landmark-guilang-guilang/1.avif",
+    image: "images/destinations/eagle-landmark/eagle-landmark.png",
     link: "destinations/nature-&-landmarks/eagle-landmark-guilang-guilang.html",
   },
+
   {
     name: "General Douglas MacArthur Landmark",
     category: "landmarks",
     description:
       "A historical landmark commemorating General Douglas MacArthur.",
-    image: "images/destinations/macarthur-landmark/1.jpg",
+    image: "images/destinations/macarthur-landmark/macarthur.png",
     link: "destinations/nature-&-landmarks/macarthur-landmark.html",
   },
   {
@@ -154,12 +157,13 @@ const destinations = [
     image: "images/destinations/manolo-terminal/terminal.png",
     link: "destinations/major-&-historical-places/manoloTerminal.html",
   },
+
   {
     name: "Nasiklapan Falls",
     category: "nature",
     description:
       "A scenic waterfall surrounded by lush greenery and cool highland air in Manolo Fortich, Bukidnon.",
-    image: "images/destinations/nasiklapan-falls/1.avif",
+    image: "images/destinations/nasiklapan-falls/falls.png",
     link: "destinations/nature-&-landmarks/nasiklapan-falls.html",
   },
   {
@@ -167,7 +171,7 @@ const destinations = [
     category: "nature",
     description:
       "A natural cave formation set amid scenic highland terrain in Manolo Fortich, Bukidnon.",
-    image: "images/destinations/sumalsag-cave/1.avif",
+    image: "images/destinations/sumalsag-cave/cave.png",
     link: "destinations/nature-&-landmarks/sumalsag-cave.html",
   },
 

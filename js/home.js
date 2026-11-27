@@ -76,17 +76,8 @@ const destinations = [
     category: "historical places",
     description:
       "A historical landmark associated with the area's religious heritage.",
-    image:
-      "images/destinations/our-lady-of-perpetual-help-parish-church/church1.png",
-    link: "destinations/major-&-historical-places/our-lady-of-perpetual-help-parish-church.html",
-  },
-  {
-    name: "Del Monte Airstrip",
-    category: "historical places",
-    description:
-      "A historical landmark associated with the area's aviation heritage.",
-    image: "images/destinations/del-monte-airstrip/airstrip1.png",
-    link: "destinations/major-&-historical-places/del-monte-airstrip.html",
+    image: "images/destinations/church-of-our-lady-of-perpetual-help/1.png",
+    link: "destinations/major-&-historical-places/church-of-our-lady-of-perpetual-help.html",
   },
 
   {

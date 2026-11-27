@@ -13,7 +13,7 @@ const destinationData = {
     location: "Dahilayan, Manolo Fortich, Bukidnon",
 
     description:
-      "Dahilayan Forest Park is a nature and adventure destination located in Barangay Dahilayan, Manolo Fortich, Bukidnon. Known for its cool mountain climate, lush forest surroundings, and scenic landscapes, it offers visitors a place to enjoy outdoor recreation and experience the natural beauty of the highlands. The destination is part of the Dahilayan tourism area, which features various recreational attractions and outdoor activities suitable for families, friends, and adventure enthusiasts. Its mountain setting and refreshing atmosphere make it an ideal destination for sightseeing, leisure, and outdoor exploration.",
+      "Tucked in Barangay Dahilayan, Manolo Fortich, Bukidnon, Dahilayan Adventure Park pairs crisp highland air and pine-lined slopes with active outdoor recreation. Visitors can enjoy thrilling rides, scenic views, and family-friendly spaces set within a refreshing mountain environment.",
 
     search: "Dahilayan Adventure Park, Manolo Fortich, Bukidnon",
 
@@ -38,7 +38,7 @@ const destinationData = {
     location: "Libona, Manolo Fortich, Bukidnon",
 
     description:
-      "Cowboy's Camp is a relaxing countryside destination in Libona, Bukidnon, where visitors can enjoy a peaceful outdoor experience surrounded by nature. With its rustic cowboy-inspired atmosphere and scenic surroundings, it's a great spot for sightseeing, taking photos, and spending quality time with family and friends.",
+      "Cowboy's Camp offers a laid-back countryside retreat in Libona, Bukidnon, shaped by rustic ranch touches, open views, and cool upland breezes. It is an inviting spot for relaxed photo stops, easy sightseeing, and unhurried time with family and friends.",
 
     search: "Cowboy's Camp, Manolo Fortich, Bukidnon",
 
@@ -54,7 +54,7 @@ const destinationData = {
     location: "San Miguel, Manolo Fortich, Bukidnon",
 
     description:
-      "Experience a relaxing day at Del Monte Golf Club in Manolo Fortich, Bukidnon, home to a beautiful 18-hole golf course surrounded by lush greenery, tall pine trees, and scenic landscapes. Enjoy the cool mountain breeze while playing golf across its well-maintained fairways and peaceful surroundings. Whether you're an experienced golfer or simply looking for a quiet place to unwind, Del Monte Golf Club offers a refreshing escape and a unique outdoor experience.",
+      "Set in San Miguel, Manolo Fortich, Bukidnon, Del Monte Golf Course features an 18-hole layout bordered by towering pines, manicured greens, and breezy highland scenery. Whether you are teeing off or simply taking in the quiet surroundings, it offers a calm and refreshing break.",
 
     search: "Del Monte Golf Course, Manolo Fortich, Bukidnon",
 
@@ -70,7 +70,7 @@ const destinationData = {
     location: "Manolo Fortich, Bukidnon",
 
     description:
-      "Discover KampoJuan Eco Adventure Farm in Manolo Fortich, Bukidnon, where nature, adventure, and Filipino history come together. Enjoy exciting activities like Anicycle sky biking and ziplining, explore its lush surroundings, or visit the heritage house filled with antiques, artworks, and historical treasures. It's a perfect destination for adventure seekers, nature lovers, and anyone looking for a unique countryside experience.",
+      "KampoJuan Eco-Adventure Farm blends outdoor thrills, lush greenery, and local heritage in Manolo Fortich, Bukidnon. Guests can try sky biking or ziplining, stroll through shaded farm grounds, and browse heritage pieces and antiques in a lively countryside setting.",
 
     search: "KampoJuan Eco Adventure Farm, Manolo Fortich, Bukidnon",
 
@@ -86,7 +86,7 @@ const destinationData = {
     location: "Manolo Fortich, Bukidnon",
 
     description:
-      "The Del Monte Pineapple Plantation is associated with the agricultural landscape of Bukidnon. The plantation and its monument are notable landmarks connected to the area's pineapple industry.",
+      "Spanning the rolling uplands of Manolo Fortich, Bukidnon, the Del Monte Pineapple Plantation and Monument highlights the province's long-standing agricultural roots. The wide pineapple fields and historic marker showcase an iconic part of local livelihood and scenery.",
 
     search: "Del Monte Pineapple Plantation Monument, Manolo Fortich, Bukidnon",
 
@@ -102,7 +102,7 @@ const destinationData = {
     location: "Camp Phillips, Manolo Fortich, Bukidnon",
 
     description:
-      "Del Monte Soccer Field is a well-known sports and recreational field set amid open green spaces and cool highland air in Manolo Fortich, Bukidnon.",
+      "Del Monte Soccer Field is a popular athletic ground in Camp Phillips, Manolo Fortich, Bukidnon, prized for its expansive turf and energetic sports culture. Framed by cool highland breezes and scenic views, it regularly hosts tournaments, friendly games, and active community gatherings.",
 
     search: "Del Monte Soccer Field, Manolo Fortich, Bukidnon",
 
@@ -118,7 +118,7 @@ const destinationData = {
     location: "Tankulan (Poblacion), Manolo Fortich, Bukidnon",
 
     description:
-      "Manolo Fortich Municipal Hall serves as the center of local governance and civic landmarks in Manolo Fortich, Bukidnon.",
+      "Manolo Fortich Municipal Hall serves as a prominent public landmark in Tankulan, Manolo Fortich, Bukidnon, symbolizing local leadership, heritage, and town pride. Located within the center of the municipality, it anchors civic life and showcases the community's ongoing progress.",
 
     search: "Manolo Fortich Municipal Hall, Manolo Fortich, Bukidnon",
 
@@ -134,7 +134,7 @@ const destinationData = {
     location: "Manolo Fortich, Bukidnon",
 
     description:
-      "Ogaong View Deck in Manolo Fortich, Bukidnon, is a perfect spot to enjoy breathtaking views of Tagoloan River Canyon, Rolling Pigsuguan Hills, and Buklod Ridge. Surrounded by beautiful mountain landscapes and fresh countryside air, visitors can enjoy sightseeing, camping, and watching the stunning sea of clouds. It's an ideal destination for nature lovers and travelers looking for a peaceful escape and unforgettable views.",
+      "Perched above the uplands of Manolo Fortich, Bukidnon, Ogaong View Deck rewards visitors with sweeping views of Tagoloan River Canyon, rolling hills, and surrounding ridges. Fresh mountain air, camping spots, and sunrise vistas make it a standout stop for scenic relaxation.",
 
     search: "Ogaong View Deck, Manolo Fortich, Bukidnon",
 
@@ -150,7 +150,7 @@ const destinationData = {
     location: "Manolo Fortich, Bukidnon",
 
     description:
-      "This landmark commemorates General Douglas MacArthur and serves as a historical point of interest in Manolo Fortich. Visitors can learn about its connection to local and Philippine history.",
+      "General Douglas MacArthur Landmark commemorates a notable piece of local history framed by Manolo Fortich's natural terrain. Blending heritage with scenic surroundings, it invites visitors to pause, take in the view, and appreciate the area's past.",
 
     search: "General Douglas MacArthur Landmark, Manolo Fortich, Bukidnon",
 
@@ -169,7 +169,7 @@ const destinationData = {
     location: "Mangima, Manolo Fortich, Bukidnon",
 
     description:
-      "Mangima Heroes Shrine is a historical memorial that honors heroes and commemorates events from the past. It is a place of remembrance and historical interest.",
+      "Mangima Heroes Shrine stands as a solemn tribute to bravery and service, surrounded by the lush greenery of Mangima in Manolo Fortich, Bukidnon. Built to honor WWII defenders and local courage, its quiet setting offers a meaningful pause along the highlands.",
 
     search: "Mangima Heroes Shrine, Manolo Fortich, Bukidnon",
 
@@ -183,7 +183,7 @@ const destinationData = {
     location: "Guilang-Guilang, Manolo Fortich, Bukidnon",
 
     description:
-      "Eagle Landmark in Barangay Guilang-Guilang offers panoramic highland views and a memorable landmark stop in Manolo Fortich, Bukidnon.",
+      "Eagle Landmark in Barangay Guilang-Guilang stands out as a scenic viewpoint in Manolo Fortich, Bukidnon, rewarding visitors with expansive valley views and crisp highland weather. It is a favorite photo stop for travelers seeking elevated landscapes and open-air beauty.",
 
     search: "Eagle Landmark Guilang-Guilang, Manolo Fortich, Bukidnon",
 
@@ -203,7 +203,7 @@ const destinationData = {
     location: "Manolo Fortich, Bukidnon",
 
     description:
-      "Nasiklapan Falls is a scenic waterfall destination surrounded by lush greenery and cool highland air in Manolo Fortich, Bukidnon.",
+      "Nasiklapan Falls is a hidden waterfall retreat framed by dense foliage and refreshing mountain air in Manolo Fortich, Bukidnon. It draws nature lovers looking for a scenic walk, cool waters, and a peaceful break from crowded tourist spots.",
 
     search: "Nasiklapan Falls, Manolo Fortich, Bukidnon",
 
@@ -219,7 +219,7 @@ const destinationData = {
     location: "Manolo Fortich, Bukidnon",
 
     description:
-      "Sumalsag Cave is a natural cave formation set amid scenic highland terrain in Manolo Fortich, Bukidnon.",
+      "Sumalsag Cave provides a fascinating subterranean stop for travelers eager to see natural rock formations in a cool, shaded setting in Manolo Fortich, Bukidnon. It brings a sense of discovery and adventure to any nature itinerary around the highlands.",
 
     search: "Sumalsag Cave, Manolo Fortich, Bukidnon",
 
@@ -235,7 +235,7 @@ const destinationData = {
     location: "Tankulan, Manolo Fortich, Bukidnon",
 
     description:
-      "Manolo Fortich Bus Terminal is a public transportation hub located in Tankulan, Manolo Fortich, Bukidnon.",
+      "Manolo Fortich Bus Terminal acts as the main transit point in Tankulan, Manolo Fortich, Bukidnon, linking passengers to surrounding barangays, neighboring towns, and major highland spots. It provides a convenient jumping-off point for travelers exploring the province.",
 
     search: "Manolo Fortich Central Station, Tankulan, Bukidnon, Philippines",
 
@@ -252,7 +252,7 @@ const destinationData = {
     location: "Poblacion, Manolo Fortich, Bukidnon",
 
     description:
-      "Our Lady of the Immaculate Conception Parish is a prominent church and community landmark located in Manolo Fortich, Bukidnon.",
+      "Our Lady of the Immaculate Conception Parish is a treasured church and spiritual landmark in Poblacion, Manolo Fortich, Bukidnon. Known for its serene atmosphere and deep roots in community tradition, it offers visitors a restful place for reflection along their journey.",
 
     search:
       "Our Lady of the Immaculate Conception Parish, Manolo Fortich, Bukidnon",
@@ -270,7 +270,7 @@ const destinationData = {
     location: "Dahilayan, Manolo Fortich, Bukidnon",
 
     description:
-      "Kumaykay River Farm is a serene agri-tourism and nature retreat tucked along the banks of the Kumaykay River in Barangay Dalirig, Manolo Fortich, Bukidnon. Surrounded by vibrant gardens, towering trees, and cool mountain waters, it offers visitors a quiet escape from the city, fresh farm-to-table meals, and cozy riverside cottages.Experience glamping, outdoor camping, river adventures, horseback riding, and delicious farm-style dining. It's the perfect place to relax, reconnect with nature, and create unforgettable memories with family and friends!",
+      "Tucked beside cool mountain waters and leafy trees in Manolo Fortich, Bukidnon, Kumaykay River Farm is a calm nature and farm escape. Visitors can unwind by the river, enjoy fresh farm-style food, try outdoor activities, and spend relaxed days with family and friends.",
 
     search: "Kumaykay River Farm, Dalirig, Manolo Fortich, Bukidnon",
 
@@ -286,7 +286,7 @@ const destinationData = {
     location: "Barangay Dalirig, Manolo Fortich, Bukidnon",
 
     description:
-      "Alalum Falls is one of Manolo Fortich's most iconic natural landmarks, plunging roughly 148 feet down a mossy rock cliff surrounded by dense tropical foliage in Barangay Dalirig, Bukidnon. Located near Sayre Highway, it is a refreshing stopover offering scenic viewpoints and natural beauty.",
+      "Set in Barangay Dalirig, Manolo Fortich, Bukidnon, Alalum Falls is a striking cascade plunging down a mossy cliff amid lush greenery. Its natural setting and cool mountain air make it a memorable scenic stop near the highway.",
 
     search: "Alalum Falls, Dalirig, Manolo Fortich, Bukidnon",
 
@@ -300,7 +300,7 @@ const destinationData = {
     location: "Mangima, Manolo Fortich, Bukidnon",
 
     description:
-      "Mangima Spring Resort is a classic roadside mountain resort nestled within the lush slopes of Mangima Canyon in Manolo Fortich, Bukidnon, famous for its cool natural spring pools, picnic areas, and fresh highland air along Sayre Highway.",
+      "Nestled along the green slopes of Mangima in Manolo Fortich, Bukidnon, Mangima Spring Resort offers cool spring waters, shaded picnic spots, and crisp highland air. It is a classic, refreshing stop for travelers passing through the area.",
 
     search: "Mangima Spring Resort, Mangima, Manolo Fortich, Bukidnon",
 
@@ -314,7 +314,7 @@ const destinationData = {
     location: "Tankulan (Poblacion), Manolo Fortich, Bukidnon",
 
     description:
-      "Located in the heart of Barangay Tankulan, the Manolo Fortich Municipal Plaza serves as the lively civic and social center of the municipality, featuring open lawns, shaded walkways, community landmarks, and afternoon and evening local activity.",
+      "Manolo Fortich Municipal Plaza is a lively public park in Tankulan, Manolo Fortich, Bukidnon, featuring open lawns, shade trees, and a relaxed space for casual walks and local events. It gives both residents and travelers an inviting spot to enjoy the town's everyday charm.",
 
     search:
       "Manolo Fortich Municipal Plaza, Tankulan, Manolo Fortich, Bukidnon",
@@ -1168,101 +1168,4 @@ function displayWeatherCard(title, type, data) {
         </div>
 
     `;
-}
-
-// ==========================================
-// 15. LOAD WEATHER FORECAST
-// ==========================================
-
-async function loadWeatherForecast(userCoordinates, destinationCoordinates) {
-  const weatherPanel = document.getElementById("weatherPanel");
-
-  const weatherStatus = document.getElementById("weatherStatus");
-
-  const weatherCards = document.getElementById("weatherCards");
-
-  // DISPLAY WEATHER PANEL
-
-  weatherPanel.hidden = false;
-
-  weatherStatus.textContent = "Loading weather information...";
-
-  weatherCards.innerHTML = "";
-
-  try {
-    // REQUEST BOTH LOCATIONS AT THE SAME TIME
-
-    const results = await Promise.allSettled([
-      getWeather(userCoordinates[0], userCoordinates[1]),
-
-      getWeather(destinationCoordinates[0], destinationCoordinates[1]),
-    ]);
-
-    let cardsHTML = "";
-
-    // CURRENT LOCATION WEATHER
-
-    if (results[0].status === "fulfilled") {
-      cardsHTML += displayWeatherCard(
-        "Your Current Location",
-        "GPS LOCATION",
-        results[0].value,
-      );
-    } else {
-      console.error("Current location weather error:", results[0].reason);
-
-      cardsHTML += `
-
-                <div class="weather-card">
-
-                    <h3>Your Current Location</h3>
-
-                    <p>Weather information is unavailable.</p>
-
-                </div>
-
-            `;
-    }
-
-    // DESTINATION WEATHER
-
-    if (results[1].status === "fulfilled") {
-      cardsHTML += displayWeatherCard(
-        currentDestination.name,
-        "DESTINATION",
-        results[1].value,
-      );
-    } else {
-      console.error("Destination weather error:", results[1].reason);
-
-      cardsHTML += `
-
-                <div class="weather-card">
-
-                    <h3>${currentDestination.name}</h3>
-
-                    <p>Weather information is unavailable.</p>
-
-                </div>
-
-            `;
-    }
-
-    weatherCards.innerHTML = cardsHTML;
-
-    if (
-      results[0].status === "fulfilled" &&
-      results[1].status === "fulfilled"
-    ) {
-      weatherStatus.textContent = "Weather information successfully updated.";
-    } else {
-      weatherStatus.textContent =
-        "Some weather information could not be retrieved.";
-    }
-  } catch (error) {
-    console.error("Weather loading error:", error);
-
-    weatherStatus.textContent =
-      "Unable to load weather information. Please try again.";
-  }
 }

@@ -81,6 +81,22 @@ const destinationData = {
     photos: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"],
   },
 
+  "bukidnon-provincial-hospital": {
+    name: "Bukidnon Provincial Hospital",
+    location: "San Miguel, Manolo Fortich, Bukidnon",
+
+    description:
+      "Bukidnon Provincial Hospital – Manolo Fortich is a government healthcare facility located in Barangay San Miguel, Manolo Fortich, Bukidnon. It provides essential medical services, including general consultations, laboratory tests, X-rays, pediatrics, surgery, and maternal care, serving the healthcare needs of the local community and nearby areas.",
+
+    search: "Bukidnon Provincial Hospital, Manolo Fortich, Bukidnon",
+
+    folder: "bukidnon-provincial-hospital",
+
+    coordinates: [8.3842306, 124.8389835],
+
+    photos: ["1.jpg", "2.jpg", "3.jpg"],
+  },
+
   "del-monte-pineapple-plantation": {
     name: "Del Monte Pineapple Plantation and Monument",
     location: "Manolo Fortich, Bukidnon",
@@ -129,6 +145,22 @@ const destinationData = {
     photos: ["municipal.png"],
   },
 
+  "view-deck-maluko": {
+    name: "Maluko View Deck",
+    location: "Manolo Fortich, Bukidnon",
+
+    description:
+      "**View Deck Maluko** in Manolo Fortich, Bukidnon, is a lovely stop for travelers who want to enjoy beautiful mountain scenery and a refreshing countryside atmosphere. Surrounded by rolling green landscapes and breathtaking views, it offers a great spot for sightseeing, taking memorable photos, and enjoying a peaceful break along your journey. Whether you're traveling with family or friends, it's a simple yet worthwhile place to appreciate the natural beauty of Bukidnon.",
+
+    search: "Maluko View Deck, Manolo Fortich, Bukidnon",
+
+    folder: "view-deck-maluko",
+
+    coordinates: [8.3804387, 124.9302129],
+
+    photos: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg"],
+  },
+
   "ogaong-view-deck": {
     name: "Ogaong View Deck",
     location: "Manolo Fortich, Bukidnon",
@@ -143,6 +175,22 @@ const destinationData = {
     coordinates: [8.4398, 124.8776],
 
     photos: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg"],
+  },
+
+  "church-of-our-lady-of-perpetual-help": {
+    name: "Church of Our Lady of Perpetual Help",
+    location: "Cawayanon, Manolo Fortich, Bukidnon",
+
+    description:
+      "Our Lady of Perpetual Help Church in Manolo Fortich, Bukidnon, is a welcoming place of worship where visitors can experience peace, prayer, and reflection. Known for its religious significance and strong Catholic community, the church offers a quiet space for attending Mass, expressing gratitude, and strengthening one's faith. It is a meaningful destination for both locals and travelers seeking a moment of spiritual connection.",
+
+    search: "Our Lady of Perpetual Help Church, Manolo Fortich, Bukidnon",
+
+    folder: "church-of-our-lady-of-perpetual-help",
+
+    coordinates: [8.381, 124.8343],
+
+    photos: ["1.jpg", "2.jpg", "3.webp", "4.jpg", "5.jpg", "6.jpg"],
   },
 
   "macarthur-landmark": {

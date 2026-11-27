@@ -3,7 +3,7 @@ const destinations = [
     name: "Dahilayan Adventure Park",
     category: "adventure",
     description:
-      "An adventure destination known for outdoor activities and exciting attractions.",
+      "An adventure destination known for outdoor activities and exciting attractions. Dahilayan Forest Park is a nature and adventure destination located in Barangay Dahilayan, Manolo Fortich, Bukidnon.",
     image: "images/destinations/dahilayan-adventure-park/entrance.jpg",
     link: "destinations/adventure/dahilayan-adventure-park.html",
   },
@@ -27,18 +27,11 @@ const destinations = [
     name: "KampoJuan Eco-Adventure Farm",
     category: "adventure",
     description:
-      "An eco-adventure destination offering outdoor experiences and nature activities.",
+      "KampoJuan Eco-Adventure Farm is an eco-adventure destination that combines outdoor recreation with a natural farm environment. It offers visitors a place to enjoy activities and explore the outdoors.",
     image: "images/destinations/kampojuan-eco-adventure-farm/1.jpg",
     link: "destinations/adventure/kampojuan-eco-adventure-farm.html",
   },
-  {
-    name: "Kumaykay River Farm",
-    category: "adventure",
-    description:
-      "An adventure destination known for outdoor activities and exciting attractions.",
-    image: "images/destinations/kumaykay-river-farm/1.webp",
-    link: "destinations/adventure/kumaykay-river-farm.html",
-  },
+
   {
     name: "Ogaong View Deck",
     category: "adventure",
@@ -48,11 +41,11 @@ const destinations = [
     link: "destinations/adventure/ogaong-view-deck.html",
   },
   {
-    name: "View deck Maluko",
+    name: "Maluko View Deck",
     category: "adventure",
     description:
-      "An adventure destination known for outdoor activities and exciting attractions.",
-    image: "images/destinations/view-deck-maluko/view1.png",
+      "Enjoy a scenic stop at View Deck Maluko in Manolo Fortich, Bukidnon, where you can admire breathtaking canyon views, rolling green landscapes, and refreshing mountain air!",
+    image: "images/destinations/view-deck-maluko/1.jpg",
     link: "destinations/adventure/view-deck-maluko.html",
   },
   {
@@ -67,27 +60,19 @@ const destinations = [
     name: "Bukidnon Provincial Hospital",
     category: "key places",
     description:
-      "A historical landmark associated with the area's healthcare facilities.",
-    image: "images/destinations/bukidnon-provincial-hospital/hospital1.png",
+      "Bukidnon Provincial Hospital – Manolo Fortich is a government healthcare facility providing essential medical services and healthcare assistance to residents of Manolo Fortich and nearby communities.",
+    image: "images/destinations/bukidnon-provincial-hospital/1.png",
     link: "destinations/major-&-historical-places/bukidnon-provincial-hospital.html",
   },
   {
     name: "Our Lady of Perpetual Help Parish Church",
     category: "historical places",
     description:
-      "A historical landmark associated with the area's religious heritage.",
-    image:
-      "images/destinations/our-lady-of-perpetual-help-parish-church/church1.png",
-    link: "destinations/major-&-historical-places/our-lady-of-perpetual-help-parish-church.html",
+      "Our Lady of Perpetual Help Church in Cawayanon, Manolo Fortich, Bukidnon, is a peaceful place of worship and pilgrimage known for its rich history, strong Catholic devotion, and welcoming atmosphere, making it a meaningful stop for prayer, reflection, and thanksgiving.",
+    image: "images/destinations/church-of-our-lady-of-perpetual-help/1.jpg",
+    link: "destinations/major-&-historical-places/church-of-our-lady-of-perpetual-help.html",
   },
-  {
-    name: "Del Monte Airstrip",
-    category: "historical places",
-    description:
-      "A historical landmark associated with the area's aviation heritage.",
-    image: "images/destinations/del-monte-airstrip/airstrip1.png",
-    link: "destinations/major-&-historical-places/del-monte-airstrip.html",
-  },
+
   {
     name: "Del Monte Soccer Field",
     category: "key places",
@@ -170,14 +155,7 @@ const destinations = [
   },
 
   // --- LOCAL ATTRACTIONS (shown ONLY when "Local attractions" is clicked) ---
-  {
-    name: "Kumaykay River Farm",
-    category: "local",
-    description:
-      "A relaxing farm-to-table riverside getaway featuring botanical gardens, cozy cabins, and peaceful nature trails.",
-    image: "images/destinations/kumaykay-river-farm/1.webp",
-    link: "destinations/kumaykay-river-farm.html",
-  },
+
   {
     name: "Manolo Fortich Municipal Plaza",
     category: "local",

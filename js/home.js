@@ -52,7 +52,7 @@ const destinations = [
     category: "adventure",
     description:
       "An adventure destination known for outdoor activities and exciting attractions.",
-    image: "images/destinations/view-deck-maluko/view1.png",
+    image: "images/destinations/view-deck-maluko/1.jpg",
     link: "destinations/adventure/view-deck-maluko.html",
   },
   {
@@ -68,7 +68,7 @@ const destinations = [
     category: "key places",
     description:
       "A historical landmark associated with the area's healthcare facilities.",
-    image: "images/destinations/bukidnon-provincial-hospital/hospital1.png",
+    image: "images/destinations/bukidnon-provincial-hospital/1.jpg",
     link: "destinations/major-&-historical-places/bukidnon-provincial-hospital.html",
   },
   {
@@ -119,7 +119,7 @@ const destinations = [
     description:
       "A serene local church celebrating faith, heritage, and quiet reflection.",
     image: "images/destinations/immaculate-conception-church/church.png",
-    link: "destinations/major-&-historical-places/our-lady-of-the-immaculate-conception-parish.html",
+    link: "destinations/major-&-historical-places/our-lady-of-the-immaculate-conception-church.html",
   },
   {
     name: "Philippine Eagle Landmark",

@@ -150,7 +150,7 @@ const destinationData = {
     location: "Manolo Fortich, Bukidnon",
 
     description:
-      "**View Deck Maluko** in Manolo Fortich, Bukidnon, is a lovely stop for travelers who want to enjoy beautiful mountain scenery and a refreshing countryside atmosphere. Surrounded by rolling green landscapes and breathtaking views, it offers a great spot for sightseeing, taking memorable photos, and enjoying a peaceful break along your journey. Whether you're traveling with family or friends, it's a simple yet worthwhile place to appreciate the natural beauty of Bukidnon.",
+      "View Deck Maluko in Manolo Fortich, Bukidnon, is a lovely stop for travelers who want to enjoy beautiful mountain scenery and a refreshing countryside atmosphere. Surrounded by rolling green landscapes and breathtaking views, it offers a great spot for sightseeing, taking memorable photos, and enjoying a peaceful break along your journey. Whether you're traveling with family or friends, it's a simple yet worthwhile place to appreciate the natural beauty of Bukidnon.",
 
     search: "Maluko View Deck, Manolo Fortich, Bukidnon",
 
@@ -295,8 +295,8 @@ const destinationData = {
     photos: ["terminal.png"],
   },
 
-  "our-lady-of-the-immaculate-conception-parish": {
-    name: "Our Lady of the Immaculate Conception Parish",
+  "our-lady-of-the-immaculate-conception-church": {
+    name: "Our Lady of the Immaculate Conception Parish Church",
     location: "Poblacion, Manolo Fortich, Bukidnon",
 
     description:

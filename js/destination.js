@@ -1217,3 +1217,100 @@ function displayWeatherCard(title, type, data) {
 
     `;
 }
+
+// ==========================================
+// 15. LOAD WEATHER FORECAST
+// ==========================================
+
+async function loadWeatherForecast(userCoordinates, destinationCoordinates) {
+  const weatherPanel = document.getElementById("weatherPanel");
+
+  const weatherStatus = document.getElementById("weatherStatus");
+
+  const weatherCards = document.getElementById("weatherCards");
+
+  // DISPLAY WEATHER PANEL
+
+  weatherPanel.hidden = false;
+
+  weatherStatus.textContent = "Loading weather information...";
+
+  weatherCards.innerHTML = "";
+
+  try {
+    // REQUEST BOTH LOCATIONS AT THE SAME TIME
+
+    const results = await Promise.allSettled([
+      getWeather(userCoordinates[0], userCoordinates[1]),
+
+      getWeather(destinationCoordinates[0], destinationCoordinates[1]),
+    ]);
+
+    let cardsHTML = "";
+
+    // CURRENT LOCATION WEATHER
+
+    if (results[0].status === "fulfilled") {
+      cardsHTML += displayWeatherCard(
+        "Your Current Location",
+        "GPS LOCATION",
+        results[0].value,
+      );
+    } else {
+      console.error("Current location weather error:", results[0].reason);
+
+      cardsHTML += `
+
+                <div class="weather-card">
+
+                    <h3>Your Current Location</h3>
+
+                    <p>Weather information is unavailable.</p>
+
+                </div>
+
+            `;
+    }
+
+    // DESTINATION WEATHER
+
+    if (results[1].status === "fulfilled") {
+      cardsHTML += displayWeatherCard(
+        currentDestination.name,
+        "DESTINATION",
+        results[1].value,
+      );
+    } else {
+      console.error("Destination weather error:", results[1].reason);
+
+      cardsHTML += `
+
+                <div class="weather-card">
+
+                    <h3>${currentDestination.name}</h3>
+
+                    <p>Weather information is unavailable.</p>
+
+                </div>
+
+            `;
+    }
+
+    weatherCards.innerHTML = cardsHTML;
+
+    if (
+      results[0].status === "fulfilled" &&
+      results[1].status === "fulfilled"
+    ) {
+      weatherStatus.textContent = "Weather information successfully updated.";
+    } else {
+      weatherStatus.textContent =
+        "Some weather information could not be retrieved.";
+    }
+  } catch (error) {
+    console.error("Weather loading error:", error);
+
+    weatherStatus.textContent =
+      "Unable to load weather information. Please try again.";
+  }
+}

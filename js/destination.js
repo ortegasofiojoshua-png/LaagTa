@@ -221,9 +221,11 @@ const destinationData = {
 
     search: "Mangima Heroes Shrine, Manolo Fortich, Bukidnon",
 
+    coordinates: [8.3769, 124.8809],
+
     folder: "mangima-heroes-shrine",
 
-    photos: ["mangima1.png", "mangima2.png", "mangima3.png"],
+    photos: ["mangima1.png", "mangima2.png", "mangima3.png", "4.jpg", "5.jpg"],
   },
 
   "eagle-landmark-guilang-guilang": {

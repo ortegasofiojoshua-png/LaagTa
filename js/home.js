@@ -109,7 +109,7 @@ const destinations = [
     category: "historical places",
     description:
       "A serene local church celebrating faith, heritage, and quiet reflection.",
-    image: "images/destinations/immaculate-conception-church/1.jpg",
+    image: "images/destinations/immaculate-conception-church/church.png",
     link: "destinations/major-&-historical-places/our-lady-of-the-immaculate-conception-church.html",
   },
   {
@@ -133,7 +133,7 @@ const destinations = [
     category: "landmarks",
     description:
       "A tranquil memorial honoring local courage amid natural greenery.",
-    image: "images/destinations/mangima-heroes-shrine/mangima1.png",
+    image: "images/destinations/mangima-heroes-shrine/4.jpg",
     link: "destinations/nature-&-landmarks/mangima-heroes-shrine.html",
   },
   {

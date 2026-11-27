@@ -109,7 +109,7 @@ const destinations = [
     category: "historical places",
     description:
       "A serene local church celebrating faith, heritage, and quiet reflection.",
-    image: "images/destinations/immaculate-conception-church/church.png",
+    image: "images/destinations/immaculate-conception-church/1.jpg",
     link: "destinations/major-&-historical-places/our-lady-of-the-immaculate-conception-church.html",
   },
   {
